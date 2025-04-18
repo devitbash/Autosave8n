@@ -208,12 +208,11 @@ if (document.title.includes('n8n.io - Workflow Automation')) {
                 // Asegurarnos que target existe
                 if (target) {
                     target.parentNode.insertBefore(div, target);
-                    
-                    let myid = chrome.runtime.id;
+
                     let mcpData = null;
     
                     // Cargar los datos del JSON
-                    fetch(`chrome-extension://${myid}/mcpservers.json`)
+                    fetch('https://raw.githubusercontent.com/devitbash/Autosave8n/master/mcpservers.json')
                         .then(r => r.json())
                         .then(json => {
                             mcpData = json;
@@ -257,7 +256,7 @@ if (document.title.includes('n8n.io - Workflow Automation')) {
                                 if (serverDetails.command && serverDetails.args) {
                                     commandString = serverDetails.command;
                                     argsString = serverDetails.args.join(' ');
-                                    envString = Object.entries(serverDetails.env).map(([key, value]) => `${key}=${value}`).join(',\n');
+                                    envString = Object.entries(serverDetails?.env || {}).map(([key, value]) => `${key}=${value ?? ''}`).join(',\n');
                                 }
                                 
                                 // Buscar el input text donde colocaremos los datos

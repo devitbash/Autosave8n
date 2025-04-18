@@ -27,5 +27,6 @@
       "resources": ["animation.gif"],
       "matches": ["<all_urls>"]
     }
-  ]
+  ],
+  "host_permissions": ["https://raw.githubusercontent.com/devitbash/Autosave8n/master/mcpservers.json"]
 }
