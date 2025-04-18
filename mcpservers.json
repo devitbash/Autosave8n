@@ -1,0 +1,3024 @@
+{
+	"21st.dev Magic": {
+		"url": "https://github.com/21st-dev/magic-mcp",
+		"description": "Create crafted UI components inspired by the best 21st.dev design engineers.",
+		"mcpServers": {
+			"@21st-dev/magic": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@21st-dev/magic@latest",
+					"API_KEY=\"your-api-key\""
+				]
+			}
+		}
+	},
+	"Adfin": {
+		"url": "https://github.com/Adfin-Engineering/mcp-server-adfin",
+		"description": "The only platform you need to get paid - all payments in one place, invoicing and accounting reconciliations with [Adfin](https://www.adfin.com/).",
+		"mcpServers": {
+			"Adfin": {
+				"command": "<home_path>/.local/bin/uv",
+				"args": [
+					"--directory",
+					"<absolute_path_to_adfin_mcp_folder>",
+					"run",
+					"main_adfin_mcp.py"
+				],
+				"env": {
+					"ADFIN_EMAIL": "<email>",
+					"ADFIN_PASSWORD": "<password>"
+				}
+			},
+			"filesystem": {
+				"command": "<home_path>/.local/bin/uv",
+				"args": [
+					"--directory",
+					"<absolute_path_to_adfin_mcp_folder>",
+					"run",
+					"filesystem.py"
+				]
+			}
+		}
+	},
+	"AgentQL": {
+		"url": "https://github.com/tinyfish-io/agentql-mcp",
+		"description": "Enable AI agents to get structured data from unstructured web with [AgentQL](https://www.agentql.com/).",
+		"mcpServers": {
+			"agentql": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"agentql-mcp"
+				],
+				"env": {
+					"AGENTQL_API_KEY": "YOUR_API_KEY"
+				}
+			}
+		}
+	},
+	"AgentRPC": {
+		"url": "https://github.com/agentrpc/agentrpc",
+		"description": "Connect to any function, any language, across network boundaries using [AgentRPC](https://www.agentrpc.com/).",
+		"mcpServers": {
+			"agentrpc": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"agentrpc",
+					"mcp"
+				],
+				"env": {
+					"AGENTRPC_API_SECRET": "<YOUR_API_SECRET>"
+				}
+			}
+		}
+	},
+	"Aiven": {
+		"url": "https://github.com/Aiven-Open/mcp-aiven",
+		"description": "Navigate your [Aiven projects](https://go.aiven.io/mcp-server) and interact with the PostgreSQL®, Apache Kafka®, ClickHouse® and OpenSearch® services",
+		"mcpServers": {
+			"mcp-aiven": {
+				"command": "uv",
+				"args": [
+					"--directory",
+					"$REPOSITORY_DIRECTORY",
+					"run",
+					"--with-editable",
+					"$REPOSITORY_DIRECTORY",
+					"--python",
+					"3.13",
+					"mcp-aiven"
+				],
+				"env": {
+					"AIVEN_BASE_URL": "https://api.aiven.io",
+					"AIVEN_TOKEN": "$AIVEN_TOKEN"
+				}
+			}
+		}
+	},
+	"Apache IoTDB": {
+		"url": "https://github.com/apache/iotdb-mcp-server",
+		"description": "MCP Server for [Apache IoTDB](https://github.com/apache/iotdb) database and its tools",
+		"mcpServers": {
+			"iotdb": {
+				"command": "uv",
+				"args": [
+					"--directory",
+					"YOUR_REPO_PATH/src/iotdb_mcp_server",
+					"run",
+					"server.py"
+				],
+				"env": {
+					"IOTDB_HOST": "127.0.0.1",
+					"IOTDB_PORT": "6667",
+					"IOTDB_USER": "root",
+					"IOTDB_PASSWORD": "root",
+					"IOTDB_DATABASE": "test",
+					"IOTDB_SQL_DIALECT": "table"
+				}
+			}
+		}
+	},
+	"APIMatic MCP": {
+		"url": "https://github.com/apimatic/apimatic-validator-mcp",
+		"description": "APIMatic MCP Server is used to validate OpenAPI specifications using [APIMatic](https://www.apimatic.io/). The server processes OpenAPI files and returns validation summaries by leveraging APIMatic’s API.",
+		"mcpServers": {
+			"APIMatic": {
+				"command": "node",
+				"args": [
+					"C:\\PATH\\TO\\PARENT\\FOLDER\build\\index.js"
+				],
+				"env": {
+					"APIMATIC_API_KEY": "<Add your APIMatic token here>"
+				}
+			}
+		}
+	},
+	"Astra DB": {
+		"url": "https://github.com/datastax/astra-db-mcp",
+		"description": "Comprehensive tools for managing collections and documents in a [DataStax Astra DB](https://www.datastax.com/products/datastax-astra) NoSQL database with a full range of operations such as create, update, delete, find, and associated bulk actions.",
+		"mcpServers": {
+			"astra-db-mcp": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@datastax/astra-db-mcp"
+				],
+				"env": {
+					"ASTRA_DB_APPLICATION_TOKEN": "your_astra_db_token",
+					"ASTRA_DB_API_ENDPOINT": "your_astra_db_endpoint"
+				}
+			}
+		}
+	},
+	"Bankless Onchain": {
+		"url": "https://github.com/bankless/onchain-mcp",
+		"description": "Query Onchain data, like ERC20 tokens, transaction history, smart contract state.",
+		"mcpServers": {
+			"bankless": {
+				"command": "npx",
+				"args": [
+					"@bankless/onchain-mcp"
+				],
+				"env": {
+					"BANKLESS_API_TOKEN": "your_api_token_here"
+				}
+			}
+		}
+	},
+	"Box": {
+		"url": "https://github.com/box-community/mcp-server-box",
+		"description": "Interact with the Intelligent Content Management platform through Box AI.",
+		"mcpServers": {
+			"mcp-server-box": {
+				"command": "uv",
+				"args": [
+					"--directory",
+					"/Users/anovotny/Desktop/mcp-server-box",
+					"run",
+					"src/mcp_server_box.py"
+				]
+			}
+		}
+	},
+	"Chargebee": {
+		"url": "https://github.com/chargebee/agentkit/tree/main/modelcontextprotocol",
+		"description": "MCP Server that connects AI agents to [Chargebee platform](https://www.chargebee.com).",
+		"mcpServers": {
+			"chargebee": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@chargebee/mcp"
+				]
+			}
+		}
+	},
+	"Chronulus AI": {
+		"url": "https://github.com/ChronulusAI/chronulus-mcp",
+		"description": "Predict anything with Chronulus AI forecasting and prediction agents.",
+		"mcpServers": {
+			"chronulus-agents": {
+				"command": "python",
+				"args": [
+					"-m",
+					"chronulus_mcp"
+				],
+				"env": {
+					"CHRONULUS_API_KEY": "<YOUR_CHRONULUS_API_KEY>"
+				}
+			}
+		}
+	},
+	"ClickHouse": {
+		"url": "https://github.com/ClickHouse/mcp-clickhouse",
+		"description": "Query your [ClickHouse](https://clickhouse.com/) database server.",
+		"mcpServers": {
+			"mcp-clickhouse": {
+				"command": "uv",
+				"args": [
+					"run",
+					"--with",
+					"mcp-clickhouse",
+					"--python",
+					"3.13",
+					"mcp-clickhouse"
+				],
+				"env": {
+					"CLICKHOUSE_HOST": "<clickhouse-host>",
+					"CLICKHOUSE_PORT": "<clickhouse-port>",
+					"CLICKHOUSE_USER": "<clickhouse-user>",
+					"CLICKHOUSE_PASSWORD": "<clickhouse-password>",
+					"CLICKHOUSE_SECURE": "true",
+					"CLICKHOUSE_VERIFY": "true",
+					"CLICKHOUSE_CONNECT_TIMEOUT": "30",
+					"CLICKHOUSE_SEND_RECEIVE_TIMEOUT": "30"
+				}
+			}
+		}
+	},
+	"Codacy": {
+		"url": "https://github.com/codacy/codacy-mcp-server/",
+		"description": "Interact with [Codacy](https://www.codacy.com) API to query code quality issues, vulnerabilities, and coverage insights about your code.",
+		"mcpServers": {
+			"codacy": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@codacy/codacy-mcp"
+				],
+				"env": {
+					"CODACY_ACCOUNT_TOKEN": "<YOUR_TOKEN>"
+				}
+			}
+		}
+	},
+	"Comet Opik": {
+		"url": "https://github.com/comet-ml/opik-mcp",
+		"description": "Query and analyze your [Opik](https://github.com/comet-ml/opik) logs, traces, prompts and all other telemtry data from your LLMs in natural language.",
+		"mcpServers": {
+			"opik": {
+				"command": "/path/to/node",
+				"args": [
+					"/path/to/opik-mcp/build/index.js",
+					"--apiUrl",
+					"https://www.comet.com/opik/api",
+					"--apiKey",
+					"YOUR_API_KEY",
+					"--workspace",
+					"default",
+					"--debug",
+					"true"
+				],
+				"env": {
+					"OPIK_API_BASE_URL": "https://www.comet.com/opik/api",
+					"OPIK_API_KEY": "YOUR_API_KEY",
+					"OPIK_WORKSPACE_NAME": "default"
+				}
+			}
+		}
+	},
+	"Dart": {
+		"url": "https://github.com/its-dart/dart-mcp-server",
+		"description": "Interact with task, doc, and project data in [Dart](https://itsdart.com), an AI-native project management tool",
+		"mcpServers": {
+			"dart": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"dart-mcp-server"
+				],
+				"env": {
+					"DART_TOKEN": "dsa_..."
+				}
+			}
+		}
+	},
+	"EduBase": {
+		"url": "https://github.com/EduBase/MCP",
+		"description": "Interact with [EduBase](https://www.edubase.net), a comprehensive e-learning platform with advanced quizzing, exam management, and content organization capabilities",
+		"mcpServers": {
+			"edubase": {
+				"command": "node",
+				"args": [
+					"/path/to/dist/index.js"
+				],
+				"env": {
+					"EDUBASE_API_URL": "https://domain.edubase.net/api",
+					"EDUBASE_API_APP": "your_integration_app_id",
+					"EDUBASE_API_KEY": "your_integration_secret_key"
+				}
+			}
+		}
+	},
+	"Elasticsearch": {
+		"url": "https://github.com/elastic/mcp-server-elasticsearch",
+		"description": "Query your data in [Elasticsearch](https://www.elastic.co/elasticsearch)",
+		"mcpServers": {
+			"elasticsearch-mcp-server": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@elastic/mcp-server-elasticsearch"
+				],
+				"env": {
+					"ES_URL": "your-elasticsearch-url",
+					"ES_API_KEY": "your-api-key"
+				}
+			}
+		}
+	},
+	"Exa": {
+		"url": "https://github.com/exa-labs/exa-mcp-server",
+		"description": "Search Engine made for AIs by [Exa](https://exa.ai)",
+		"mcpServers": {
+			"exa": {
+				"command": "npx",
+				"args": [
+					"/path/to/exa-mcp-server/build/index.js"
+				],
+				"env": {
+					"EXA_API_KEY": "your-api-key-here"
+				}
+			}
+		}
+	},
+	"Fibery": {
+		"url": "https://github.com/Fibery-inc/fibery-mcp-server",
+		"description": "Perform queries and entity operations in your [Fibery](https://fibery.io) workspace.",
+		"mcpServers": {
+			"fibery-mcp-server": {
+				"command": "uv",
+				"args": [
+					"tool",
+					"run",
+					"fibery-mcp-server",
+					"--fibery-host",
+					"your-domain.fibery.io",
+					"--fibery-api-token",
+					"your-api-token"
+				]
+			}
+		}
+	},
+	"Financial Datasets": {
+		"url": "https://github.com/financial-datasets/mcp-server",
+		"description": "Stock market API made for AI agents",
+		"mcpServers": {
+			"financial-datasets": {
+				"command": "/path/to/uv",
+				"args": [
+					"--directory",
+					"/absolute/path/to/financial-datasets-mcp",
+					"run",
+					"server.py"
+				]
+			}
+		}
+	},
+	"Firecrawl": {
+		"url": "https://github.com/mendableai/firecrawl-mcp-server",
+		"description": "Extract web data with [Firecrawl](https://firecrawl.dev)",
+		"mcpServers": {
+			"firecrawl-mcp": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"firecrawl-mcp"
+				],
+				"env": {
+					"FIRECRAWL_API_KEY": "YOUR-API-KEY"
+				}
+			}
+		}
+	},
+	"Fireproof": {
+		"url": "https://github.com/fireproof-storage/mcp-database-server",
+		"description": "Immutable ledger database with live synchronization",
+		"mcpServers": {
+			"fireproof": {
+				"command": "/path/to/fireproof-mcp/build/index.js"
+			}
+		}
+	},
+	"Gitee": {
+		"url": "https://github.com/oschina/mcp-gitee",
+		"description": "Gitee API integration, repository, issue, and pull request management, and more.",
+		"mcpServers": {
+			"gitee": {
+				"command": "mcp-gitee",
+				"env": {
+					"GITEE_API_BASE": "https://gitee.com/api/v5",
+					"GITEE_ACCESS_TOKEN": "<your personal access token>"
+				}
+			}
+		}
+	},
+	"gotoHuman": {
+		"url": "https://github.com/gotohuman/gotohuman-mcp-server",
+		"description": "Human-in-the-loop platform - Allow AI agents and automations to send requests for approval to your [gotoHuman](https://www.gotohuman.com) inbox.",
+		"mcpServers": {
+			"gotoHuman": {
+				"command": "node",
+				"args": [
+					"/<absolute-path>/build/index.js"
+				],
+				"env": {
+					"GOTOHUMAN_API_KEY": "your-api-key"
+				}
+			}
+		}
+	},
+	"Grafana": {
+		"url": "https://github.com/grafana/mcp-grafana",
+		"description": "Search dashboards, investigate incidents and query datasources in your Grafana instance",
+		"mcpServers": {
+			"grafana": {
+				"command": "mcp-grafana",
+				"args": [],
+				"env": {
+					"GRAFANA_URL": "http://localhost:3000",
+					"GRAFANA_API_KEY": "<your service account token>"
+				}
+			}
+		}
+	},
+	"GreptimeDB": {
+		"url": "https://github.com/GreptimeTeam/greptimedb-mcp-server",
+		"description": "Provides AI assistants with a secure and structured way to explore and analyze data in [GreptimeDB](https://github.com/GreptimeTeam/greptimedb).",
+		"mcpServers": {
+			"greptimedb": {
+				"command": "uv",
+				"args": [
+					"--directory",
+					"/path/to/greptimedb-mcp-server",
+					"run",
+					"-m",
+					"greptimedb_mcp_server.server"
+				],
+				"env": {
+					"GREPTIMEDB_HOST": "localhost",
+					"GREPTIMEDB_PORT": "4002",
+					"GREPTIMEDB_USER": "root",
+					"GREPTIMEDB_PASSWORD": "",
+					"GREPTIMEDB_DATABASE": "public"
+				}
+			}
+		}
+	},
+	"Heroku": {
+		"url": "https://github.com/heroku/heroku-mcp-server",
+		"description": "Interact with the Heroku Platform through LLM-driven tools for managing apps, add-ons, dynos, databases, and more.",
+		"mcpServers": {
+			"heroku": {
+				"command": "npx -y @heroku/mcp-server",
+				"env": {
+					"HEROKU_API_KEY": "<YOUR_HEROKU_AUTH_TOKEN>"
+				}
+			}
+		}
+	},
+	"Hyperbrowser": {
+		"url": "https://github.com/hyperbrowserai/mcp",
+		"description": "[Hyperbrowser](https://www.hyperbrowser.ai/) is the next-generation platform empowering AI agents and enabling effortless, scalable browser automation.",
+		"mcpServers": {
+			"hyperbrowser": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"hyperbrowser-mcp"
+				],
+				"env": {
+					"HYPERBROWSER_API_KEY": "YOUR-API-KEY"
+				}
+			}
+		}
+	},
+	"IBM wxflows": {
+		"url": "https://github.com/IBM/wxflows/tree/main/examples/mcp/javascript",
+		"description": "Tool platform by IBM to build, test and deploy tools for any data source",
+		"mcpServers": {
+			"wxflows-server": {
+				"command": "node",
+				"args": [
+					"/path/to/wxflows-server/build/index.js"
+				],
+				"env": {
+					"WXFLOWS_APIKEY": "YOUR_WXFLOWS_APIKEY",
+					"WXFLOWS_ENDPOINT": "YOUR_WXFLOWS_ENDPOINT"
+				}
+			}
+		}
+	},
+	"Inkeep": {
+		"url": "https://github.com/inkeep/mcp-server-python",
+		"description": "RAG Search over your content powered by [Inkeep](https://inkeep.com)",
+		"mcpServers": {
+			"inkeep-mcp-server": {
+				"command": "uv",
+				"args": [
+					"--directory",
+					"<YOUR_INKEEP_MCP_SERVER_ABSOLUTE_PATH>",
+					"run",
+					"-m",
+					"inkeep_mcp_server"
+				],
+				"env": {
+					"INKEEP_API_BASE_URL": "https://api.inkeep.com/v1",
+					"INKEEP_API_KEY": "<YOUR_INKEEP_API_KEY>",
+					"INKEEP_API_MODEL": "inkeep-rag",
+					"INKEEP_MCP_TOOL_NAME": "search-product-content",
+					"INKEEP_MCP_TOOL_DESCRIPTION": "Retrieves product documentation about Inkeep. The query should be framed as a conversational question about Inkeep."
+				}
+			}
+		}
+	},
+	"Integration App": {
+		"url": "https://github.com/integration-app/mcp-server",
+		"description": "Interact with any other SaaS applications on behalf of your customers.",
+		"mcpServers": {
+			"integration-app-hubspot": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@integration-app/mcp-server"
+				],
+				"env": {
+					"INTEGRATION_APP_TOKEN": "<your-integration-app-token>",
+					"INTEGRATION_KEY": "hubspot"
+				}
+			}
+		}
+	},
+	"Keboola": {
+		"url": "https://github.com/keboola/keboola-mcp-server",
+		"description": "Build robust data workflows, integrations, and analytics on a single intuitive platform.",
+		"mcpServers": {
+			"keboola": {
+				"command": "/path/to/keboola-mcp-server/.venv/bin/python",
+				"args": [
+					"-m",
+					"keboola_mcp_server",
+					"--api-url",
+					"https://connection.YOUR_REGION.keboola.com"
+				],
+				"env": {
+					"KBC_STORAGE_TOKEN": "your-keboola-storage-token",
+					"KBC_WORKSPACE_SCHEMA": "your-workspace-schema"
+				}
+			}
+		}
+	},
+	"Lara Translate": {
+		"url": "https://github.com/translated/lara-mcp",
+		"description": "MCP Server for Lara Translate API, enabling powerful translation capabilities with support for language detection and context-aware translations.",
+		"mcpServers": {
+			"lara-translate": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@translated/lara-mcp@latest"
+				],
+				"env": {
+					"LARA_ACCESS_KEY_ID": "<YOUR_ACCESS_KEY_ID>",
+					"LARA_ACCESS_KEY_SECRET": "<YOUR_ACCESS_KEY_SECRET>"
+				}
+			}
+		}
+	},
+	"Logfire": {
+		"url": "https://github.com/pydantic/logfire-mcp",
+		"description": "Provides access to OpenTelemetry traces and metrics through Logfire.",
+		"mcpServers": {
+			"logfire": {
+				"command": "uvx",
+				"args": [
+					"logfire-mcp",
+					"--read-token=YOUR-TOKEN"
+				]
+			}
+		}
+	},
+	"Langfuse Prompt Management": {
+		"url": "https://github.com/langfuse/mcp-server-langfuse",
+		"description": "Open-source tool for collaborative editing, versioning, evaluating, and releasing prompts.",
+		"mcpServers": {
+			"langfuse": {
+				"command": "node",
+				"args": [
+					"<absolute-path>/build/index.js"
+				],
+				"env": {
+					"LANGFUSE_PUBLIC_KEY": "your-public-key",
+					"LANGFUSE_SECRET_KEY": "your-secret-key",
+					"LANGFUSE_BASEURL": "https://cloud.langfuse.com"
+				}
+			}
+		}
+	},
+	"Lingo.dev": {
+		"url": "https://github.com/lingodotdev/lingo.dev/blob/main/mcp.md",
+		"description": "Make your AI agent speak every language on the planet, using [Lingo.dev](https://lingo.dev) Localization Engine.",
+		"mcpServers": {
+			"supabase": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"lingo.dev",
+					"mcp",
+					"<api-key>"
+				]
+			}
+		}
+	},
+	"Mailgun": {
+		"url": "https://github.com/mailgun/mailgun-mcp-server",
+		"description": "Interact with Mailgun API.",
+		"mcpServers": {
+			"mailgun": {
+				"command": "node",
+				"args": [
+					"CHANGE/THIS/PATH/TO/mailgun-mcp-server/src/mailgun-mcp.js"
+				],
+				"env": {
+					"MAILGUN_API_KEY": "YOUR-mailgun-api-key"
+				}
+			}
+		}
+	},
+	"Make": {
+		"url": "https://github.com/integromat/make-mcp-server",
+		"description": "Turn your [Make](https://www.make.com/) scenarios into callable tools for AI assistants.",
+		"mcpServers": {
+			"make": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@makehq/mcp-server"
+				],
+				"env": {
+					"MAKE_API_KEY": "<your-api-key>",
+					"MAKE_ZONE": "<your-zone>",
+					"MAKE_TEAM": "<your-team-id>"
+				}
+			}
+		}
+	},
+	"Metoro": {
+		"url": "https://github.com/metoro-io/metoro-mcp-server",
+		"description": "Query and interact with kubernetes environments monitored by Metoro",
+		"mcpServers": {
+			"metoro-mcp-server": {
+				"command": "<your path to Metoro MCP server go executable>/metoro-mcp-server",
+				"args": [],
+				"env": {
+					"METORO_AUTH_TOKEN": "<your auth token>",
+					"METORO_API_URL": "https://us-east.metoro.io"
+				}
+			}
+		}
+	},
+	"Milvus": {
+		"url": "https://github.com/zilliztech/mcp-server-milvus",
+		"description": "Search, Query and interact with data in your Milvus Vector Database.",
+		"mcpServers": {
+			"milvus": {
+				"command": "/PATH/TO/uv",
+				"args": [
+					"--directory",
+					"/path/to/mcp-server-milvus/src/mcp_server_milvus",
+					"run",
+					"server.py",
+					"--milvus-uri",
+					"http://localhost:19530"
+				]
+			}
+		}
+	},
+	"Momento": {
+		"url": "https://github.com/momentohq/mcp-momento",
+		"description": "Momento Cache lets you quickly improve your performance, reduce costs, and handle load at any scale.",
+		"mcpServers": {
+			"momento": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@gomomento/mcp-momento"
+				],
+				"env": {
+					"MOMENTO_API_KEY": "your-api-key",
+					"MOMENTO_CACHE_NAME": "your-cache-name",
+					"DEFAULT_TTL_SECONDS": 60
+				}
+			}
+		}
+	},
+	"MotherDuck": {
+		"url": "https://github.com/motherduckdb/mcp-server-motherduck",
+		"description": "Query and analyze data with MotherDuck and local DuckDB",
+		"mcpServers": {
+			"mcp-server-motherduck": {
+				"command": "uvx",
+				"args": [
+					"mcp-server-motherduck",
+					"--db-path",
+					"md:",
+					"--motherduck-token",
+					"<YOUR_MOTHERDUCK_TOKEN_HERE>"
+				]
+			}
+		}
+	},
+	"Needle": {
+		"url": "https://github.com/needle-ai/needle-mcp",
+		"description": "Production-ready RAG out of the box to search and retrieve data from your own documents.",
+		"mcpServers": {
+			"needle_mcp": {
+				"command": "uv",
+				"args": [
+					"--directory",
+					"/path/to/needle-mcp",
+					"run",
+					"needle-mcp"
+				],
+				"env": {
+					"NEEDLE_API_KEY": "your_needle_api_key"
+				}
+			}
+		}
+	},
+	"Neon": {
+		"url": "https://github.com/neondatabase/mcp-server-neon",
+		"description": "Interact with the Neon serverless Postgres platform",
+		"mcpServers": {
+			"Neon": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"mcp-remote",
+					"https://mcp.neon.tech/sse"
+				]
+			}
+		}
+	},
+	"Octagon": {
+		"url": "https://github.com/OctagonAI/octagon-mcp-server",
+		"description": "Deliver real-time investment research with extensive private and public market data.",
+		"mcpServers": {
+			"octagon": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"octagon-mcp@latest"
+				],
+				"env": {
+					"OCTAGON_API_KEY": "YOUR_API_KEY_HERE"
+				}
+			}
+		}
+	},
+	"Oxylabs": {
+		"url": "https://github.com/oxylabs/oxylabs-mcp",
+		"description": "Scrape websites with Oxylabs Web API, supporting dynamic rendering and parsing for structured data extraction.",
+		"mcpServers": {
+			"oxylabs_scraper_uvx": {
+				"command": "uvx",
+				"args": [
+					"oxylabs-mcp"
+				],
+				"env": {
+					"OXYLABS_USERNAME": "OXYLABS_USERNAME",
+					"OXYLABS_PASSWORD": "OXYLABS_PASSWORD"
+				}
+			}
+		}
+	},
+	"Paddle": {
+		"url": "https://github.com/PaddleHQ/paddle-mcp-server",
+		"description": "Interact with the Paddle API. Manage product catalog, billing and subscriptions, and reports.",
+		"mcpServers": {
+			"paddle": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@paddle/paddle-mcp",
+					"--api-key=PADDLE_API_KEY",
+					"--environment=(sandbox|production)"
+				]
+			}
+		}
+	},
+	"Raygun": {
+		"url": "https://github.com/MindscapeHQ/mcp-server-raygun",
+		"description": "Interact with your crash reporting and real using monitoring data on your Raygun account",
+		"mcpServers": {
+			"raygun": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@raygun.io/mcp-server-raygun"
+				],
+				"env": {
+					"RAYGUN_PAT_TOKEN": "your-pat-token-here"
+				}
+			}
+		}
+	},
+	"Rember": {
+		"url": "https://github.com/rember/rember-mcp",
+		"description": "Create spaced repetition flashcards in [Rember](https://rember.com) to remember anything you learn in your chats",
+		"mcpServers": {
+			"rember": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@getrember/mcp",
+					"--api-key=YOUR_REMBER_API_KEY"
+				]
+			}
+		}
+	},
+	"Riza": {
+		"url": "https://github.com/riza-io/riza-mcp",
+		"description": "Arbitrary code execution and tool-use platform for LLMs by [Riza](https://riza.io)",
+		"mcpServers": {
+			"riza-server": {
+				"command": "npx",
+				"args": [
+					"@riza-io/riza-mcp"
+				],
+				"env": {
+					"RIZA_API_KEY": "your-api-key"
+				}
+			}
+		}
+	},
+	"ScreenshotOne": {
+		"url": "https://github.com/screenshotone/mcp/",
+		"description": "Render website screenshots with [ScreenshotOne](https://screenshotone.com/)",
+		"mcpServers": {
+			"screenshotone": {
+				"command": "node",
+				"args": [
+					"path/to/screenshotone/mcp/build/index.js"
+				],
+				"env": {
+					"SCREENSHOTONE_API_KEY": "<your api key>"
+				}
+			}
+		}
+	},
+	"Semgrep": {
+		"url": "https://github.com/semgrep/mcp",
+		"description": "Enable AI agents to secure code with [Semgrep](https://semgrep.dev/).",
+		"mcpServers": {
+			"semgrep": {
+				"command": "uvx",
+				"args": [
+					"semgrep-mcp"
+				],
+				"env": {
+					"SEMGREP_APP_TOKEN": "<token>"
+				}
+			}
+		}
+	},
+	"SingleStore": {
+		"url": "https://github.com/singlestore-labs/mcp-server-singlestore",
+		"description": "Interact with the SingleStore database platform",
+		"mcpServers": {
+			"singlestore-mcp-server": {
+				"command": "uvx",
+				"args": [
+					"singlestore-mcp-server",
+					"start",
+					"<SINGLESTORE_API_KEY>"
+				]
+			}
+		}
+	},
+	"StarRocks": {
+		"url": "https://github.com/StarRocks/mcp-server-starrocks",
+		"description": "Interact with [StarRocks](https://www.starrocks.io/)",
+		"mcpServers": {
+			"mcp-server-starrocks": {
+				"command": "uv",
+				"args": [
+					"run",
+					"--with",
+					"mcp-server-starrocks",
+					"mcp-server-starrocks"
+				],
+				"env": {
+					"STARROCKS_HOST": "default localhost",
+					"STARROCKS_PORT": "default 9030",
+					"STARROCKS_USER": "default root",
+					"STARROCKS_PASSWORD": "default empty"
+				}
+			}
+		}
+	},
+	"Tavily": {
+		"url": "https://github.com/tavily-ai/tavily-mcp",
+		"description": "Search engine for AI agents (search + extract) powered by [Tavily](https://tavily.com/)",
+		"mcpServers": {
+			"tavily-mcp": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"tavily-mcp@0.1.4"
+				],
+				"env": {
+					"TAVILY_API_KEY": "your-api-key-here"
+				},
+				"disabled": false,
+				"autoApprove": []
+			}
+		}
+	},
+	"Tinybird": {
+		"url": "https://github.com/tinybirdco/mcp-tinybird",
+		"description": "Interact with Tinybird serverless ClickHouse platform",
+		"mcpServers": {
+			"mcp-tinybird": {
+				"command": "uvx",
+				"args": [
+					"mcp-tinybird",
+					"stdio"
+				],
+				"env": {
+					"TB_API_URL": "<TINYBIRD_API_URL>",
+					"TB_ADMIN_TOKEN": "<TINYBIRD_ADMIN_TOKEN>"
+				}
+			}
+		}
+	},
+	"Unstructured": {
+		"url": "https://github.com/Unstructured-IO/UNS-MCP",
+		"description": "Set up and interact with your unstructured data processing workflows in [Unstructured Platform](https://unstructured.io)",
+		"mcpServers": {
+			"UNS_MCP": {
+				"command": "uvx",
+				"args": [
+					"uns_mcp"
+				],
+				"env": {
+					"UNSTRUCTURED_API_KEY": "<your-key>"
+				}
+			}
+		}
+	},
+	"Verodat": {
+		"url": "https://github.com/Verodat/verodat-mcp-server",
+		"description": "Interact with Verodat AI Ready Data platform",
+		"mcpServers": {
+			"verodat-consume": {
+				"command": "node",
+				"args": [
+					"path/to/verodat-mcp-server/build/src/consume.js"
+				],
+				"env": {
+					"VERODAT_AI_API_KEY": "your-api-key",
+					"VERODAT_API_BASE_URL": "https://verodat.io/api/v3"
+				}
+			}
+		}
+	},
+	"Xero": {
+		"url": "https://github.com/XeroAPI/xero-mcp-server",
+		"description": "Interact with the accounting data in your business using our official MCP server",
+		"mcpServers": {
+			"xero": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@xeroapi/xero-mcp-server@latest"
+				],
+				"env": {
+					"XERO_CLIENT_ID": "your_client_id_here",
+					"XERO_CLIENT_SECRET": "your_client_secret_here"
+				}
+			}
+		}
+	},
+	"ZenML": {
+		"url": "https://github.com/zenml-io/mcp-zenml",
+		"description": "Interact with your MLOps and LLMOps pipelines through your [ZenML](https://www.zenml.io) MCP server",
+		"mcpServers": {
+			"zenml": {
+				"command": "/usr/local/bin/uv",
+				"args": [
+					"run",
+					"path/to/zenml_server.py"
+				],
+				"env": {
+					"LOGLEVEL": "INFO",
+					"NO_COLOR": "1",
+					"PYTHONUNBUFFERED": "1",
+					"PYTHONIOENCODING": "UTF-8",
+					"ZENML_STORE_URL": "https://your-zenml-server-goes-here.com",
+					"ZENML_STORE_API_KEY": "your-api-key-here"
+				}
+			}
+		}
+	},
+	"Airbnb": {
+		"url": "https://github.com/openbnb-org/mcp-server-airbnb",
+		"description": "Provides tools to search Airbnb and get listing details.",
+		"mcpServers": {
+			"airbnb": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@openbnb/mcp-server-airbnb"
+				]
+			}
+		}
+	},
+	"AI Agent Marketplace Index": {
+		"url": "https://github.com/AI-Agent-Hub/ai-agent-marketplace-index-mcp",
+		"description": "MCP server to search more than 5000+ AI agents and tools of various categories from [AI Agent Marketplace Index](http://www.deepnlp.org/store/ai-agent) and monitor traffic of AI Agents.",
+		"mcpServers": {
+			"ai-agent-marketplace-index-mcp": {
+				"command": "uv",
+				"args": [
+					"--directory",
+					"/ABSOLUTE/PATH/TO/PARENT/FOLDER/ai-agent-marketplace-index-mcp/src/ai-agent-marketplace-index",
+					"run",
+					"server.py"
+				]
+			}
+		}
+	},
+	"Airflow": {
+		"url": "https://github.com/yangkyeongmo/mcp-server-apache-airflow",
+		"description": "A MCP Server that connects to [Apache Airflow](https://airflow.apache.org/) using official python client.",
+		"mcpServers": {
+			"mcp-server-apache-airflow": {
+				"command": "uvx",
+				"args": [
+					"mcp-server-apache-airflow"
+				],
+				"env": {
+					"AIRFLOW_HOST": "https://your-airflow-host",
+					"AIRFLOW_USERNAME": "your-username",
+					"AIRFLOW_PASSWORD": "your-password"
+				}
+			}
+		}
+	},
+	"Airtable by domdomegg": {
+		"url": "https://github.com/domdomegg/airtable-mcp-server",
+		"description": "Read and write access to [Airtable](https://airtable.com/) databases, with schema inspection.",
+		"mcpServers": {
+			"airtable": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"airtable-mcp-server"
+				],
+				"env": {
+					"AIRTABLE_API_KEY": "pat123.abc123"
+				}
+			}
+		}
+	},
+	"Airtable by felores": {
+		"url": "https://github.com/felores/airtable-mcp",
+		"description": "Airtable Model Context Protocol Server.",
+		"mcpServers": {
+			"airtable": {
+				"command": "npx",
+				"args": [
+					"@felores/airtable-mcp-server"
+				],
+				"env": {
+					"AIRTABLE_API_KEY": "your_api_key_here"
+				}
+			}
+		}
+	},
+	"Anki": {
+		"url": "https://github.com/scorzeth/anki-mcp-server",
+		"description": "An MCP server for interacting with your [Anki](https://apps.ankiweb.net) decks and cards.",
+		"mcpServers": {
+			"anki-mcp-server": {
+				"command": "/path/to/anki-mcp-server/build/index.js"
+			}
+		}
+	},
+	"Any Chat Completions": {
+		"url": "https://github.com/pyroprompts/any-chat-completions-mcp",
+		"description": "Interact with any OpenAI SDK Compatible Chat Completions API like OpenAI, Perplexity, Groq, xAI and many more.",
+		"mcpServers": {
+			"chat-openai": {
+				"command": "node",
+				"args": [
+					"/path/to/any-chat-completions-mcp/build/index.js"
+				],
+				"env": {
+					"AI_CHAT_KEY": "OPENAI_KEY",
+					"AI_CHAT_NAME": "OpenAI",
+					"AI_CHAT_MODEL": "gpt-4o",
+					"AI_CHAT_BASE_URL": "https://api.openai.com/v1"
+				}
+			}
+		}
+	},
+	"Apple Calendar": {
+		"url": "https://github.com/Omar-v2/mcp-ical",
+		"description": "An MCP server that allows you to interact with your MacOS Calendar through natural language, including features such as event creation, modification, schedule listing, finding free time slots etc.",
+		"mcpServers": {
+			"mcp-ical": {
+				"command": "uv",
+				"args": [
+					"--directory",
+					"/ABSOLUTE/PATH/TO/PARENT/FOLDER/mcp-ical",
+					"run",
+					"mcp-ical"
+				]
+			}
+		}
+	},
+	"Atlassian": {
+		"url": "https://github.com/sooperset/mcp-atlassian",
+		"description": "Interact with Atlassian Cloud products (Confluence and Jira) including searching/reading Confluence spaces/pages, accessing Jira issues, and project metadata.",
+		"mcpServers": {
+			"mcp-atlassian": {
+				"command": "uvx",
+				"args": [
+					"mcp-atlassian"
+				],
+				"env": {
+					"CONFLUENCE_URL": "https://your-company.atlassian.net/wiki",
+					"CONFLUENCE_USERNAME": "your.email@company.com",
+					"CONFLUENCE_API_TOKEN": "your_api_token",
+					"JIRA_URL": "https://your-company.atlassian.net",
+					"JIRA_USERNAME": "your.email@company.com",
+					"JIRA_API_TOKEN": "your_api_token"
+				}
+			}
+		}
+	},
+	"AWS Cost Explorer": {
+		"url": "https://github.com/aarora79/aws-cost-explorer-mcp-server",
+		"description": "Optimize your AWS spend (including Amazon Bedrock spend) with this MCP server by examining spend across regions, services, instance types and foundation models ([demo video](https://www.youtube.com/watch?v=WuVOmYLRFmI&feature=youtu.be)).",
+		"mcpServers": {
+			"aws-cost-explorer": {
+				"command": "docker",
+				"args": [
+					"run",
+					"-i",
+					"--rm",
+					"-e",
+					"AWS_ACCESS_KEY_ID",
+					"-e",
+					"AWS_SECRET_ACCESS_KEY",
+					"-e",
+					"AWS_REGION",
+					"-e",
+					"BEDROCK_LOG_GROUP_NAME",
+					"-e",
+					"MCP_TRANSPORT",
+					"-e",
+					"CROSS_ACCOUNT_ROLE_NAME",
+					"aws-cost-explorer-mcp:latest"
+				],
+				"env": {
+					"AWS_ACCESS_KEY_ID": "YOUR_ACCESS_KEY_ID",
+					"AWS_SECRET_ACCESS_KEY": "YOUR_SECRET_ACCESS_KEY",
+					"AWS_REGION": "us-east-1",
+					"BEDROCK_LOG_GROUP_NAME": "YOUR_CLOUDWATCH_BEDROCK_MODEL_INVOCATION_LOG_GROUP_NAME",
+					"CROSS_ACCOUNT_ROLE_NAME": "ROLE_NAME_FOR_THE_ROLE_TO_ASSUME_IN_OTHER_ACCOUNTS",
+					"MCP_TRANSPORT": "stdio"
+				}
+			}
+		}
+	},
+	"AWS Resources Operations": {
+		"url": "https://github.com/baryhuang/mcp-server-aws-resources-python",
+		"description": "Run generated python code to securely query or modify any AWS resources supported by boto3.",
+		"mcpServers": {
+			"aws-resources": {
+				"command": "docker",
+				"args": [
+					"run",
+					"-i",
+					"--rm",
+					"-e",
+					"AWS_ACCESS_KEY_ID=your_access_key_id_here",
+					"-e",
+					"AWS_SECRET_ACCESS_KEY=your_secret_access_key_here",
+					"-e",
+					"AWS_DEFAULT_REGION=us-east-1",
+					"buryhuang/mcp-server-aws-resources:latest"
+				]
+			}
+		}
+	},
+	"AWS S3": {
+		"url": "https://github.com/aws-samples/sample-mcp-server-s3",
+		"description": "A sample MCP server for AWS S3 that flexibly fetches objects from S3 such as PDF documents.",
+		"mcpServers": {
+			"s3-mcp-server": {
+				"command": "uv",
+				"args": [
+					"--directory",
+					"/Users/user/generative_ai/model_context_protocol/s3-mcp-server",
+					"run",
+					"s3-mcp-server"
+				]
+			}
+		}
+	},
+	"Azure ADX": {
+		"url": "https://github.com/pab1it0/adx-mcp-server",
+		"description": "Query and analyze Azure Data Explorer databases.",
+		"mcpServers": {
+			"adx": {
+				"command": "uv",
+				"args": [
+					"--directory",
+					"<full path to adx-mcp-server directory>",
+					"run",
+					"src/adx_mcp_server/main.py"
+				],
+				"env": {
+					"ADX_CLUSTER_URL": "https://yourcluster.region.kusto.windows.net",
+					"ADX_DATABASE": "your_database"
+				}
+			}
+		}
+	},
+	"Base Free USDC Transfer": {
+		"url": "https://github.com/magnetai/mcp-free-usdc-transfer",
+		"description": "Send USDC on [Base](https://base.org) for free using Claude AI! Built with [Coinbase CDP](https://docs.cdp.coinbase.com/mpc-wallet/docs/welcome).",
+		"mcpServers": {
+			"free-usdc-transfer": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@magnetai/free-usdc-transfer"
+				],
+				"env": {
+					"COINBASE_CDP_API_KEY_NAME": "YOUR_COINBASE_CDP_API_KEY_NAME",
+					"COINBASE_CDP_PRIVATE_KEY": "YOUR_COINBASE_CDP_PRIVATE_KEY"
+				}
+			}
+		}
+	},
+	"CFBD API": {
+		"url": "https://github.com/lenwood/cfbd-mcp-server",
+		"description": "An MCP server for the [College Football Data API](https://collegefootballdata.com/).",
+		"mcpServers": {
+			"cfbd-mcp-server": {
+				"command": "uv",
+				"args": [
+					"--directory",
+					"/full/path/to/cfbd-mcp-server",
+					"run",
+					"cfbd-mcp-server"
+				],
+				"env": {
+					"CFB_API_KEY": "xxx",
+					"PATH": "/full/path/to/python"
+				}
+			}
+		}
+	},
+	"ChatSum": {
+		"url": "https://github.com/mcpso/mcp-server-chatsum",
+		"description": "Query and Summarize chat messages with LLM. by [mcpso](https://mcp.so)",
+		"mcpServers": {
+			"mcp-server-chatsum": {
+				"command": "path-to/bin/node",
+				"args": [
+					"path-to/mcp-server-chatsum/build/index.js"
+				],
+				"env": {
+					"CHAT_DB_PATH": "path-to/mcp-server-chatsum/chatbot/data/chat.db"
+				}
+			}
+		}
+	},
+	"Chess.com": {
+		"url": "https://github.com/pab1it0/chess-mcp",
+		"description": "Access Chess.com player data, game records, and other public information through standardized MCP interfaces, allowing AI assistants to search and analyze chess information.",
+		"mcpServers": {
+			"chess": {
+				"command": "docker",
+				"args": [
+					"run",
+					"--rm",
+					"-i",
+					"pab1it0/chess-mcp"
+				]
+			}
+		}
+	},
+	"Chroma": {
+		"url": "https://github.com/privetin/chroma",
+		"description": "Vector database server for semantic document search and metadata filtering, built on Chroma",
+		"mcpServers": {
+			"chroma": {
+				"command": "uv",
+				"args": [
+					"--directory",
+					"C:/MCP/server/community/chroma",
+					"run",
+					"chroma"
+				]
+			}
+		}
+	},
+	"ClaudePost": {
+		"url": "https://github.com/ZilongXue/claude-post",
+		"description": "ClaudePost enables seamless email management for Gmail, offering secure features like email search, reading, and sending.",
+		"mcpServers": {
+			"email": {
+				"command": "/Users/username/.local/bin/uv",
+				"args": [
+					"--directory",
+					"/path/to/claude-post/src/email_client",
+					"run",
+					"email-client"
+				]
+			}
+		}
+	},
+	"Cloudinary": {
+		"url": "https://github.com/felores/cloudinary-mcp-server",
+		"description": "Cloudinary Model Context Protocol Server to upload media to Cloudinary and get back the media link and details.",
+		"mcpServers": {
+			"cloudinary": {
+				"command": "npx",
+				"args": [
+					"@felores/cloudinary-mcp-server@latest"
+				],
+				"env": {
+					"CLOUDINARY_CLOUD_NAME": "your_cloud_name",
+					"CLOUDINARY_API_KEY": "your_api_key",
+					"CLOUDINARY_API_SECRET": "your_api_secret"
+				}
+			}
+		}
+	},
+	"code-executor": {
+		"url": "https://github.com/bazinga012/mcp_code_executor",
+		"description": "An MCP server that allows LLMs to execute Python code within a specified Conda environment.",
+		"mcpServers": {
+			"mcp-code-executor": {
+				"command": "node",
+				"args": [
+					"/path/to/mcp_code_executor/build/index.js"
+				],
+				"env": {
+					"CODE_STORAGE_DIR": "/path/to/code/storage",
+					"CONDA_ENV_NAME": "your-conda-env"
+				}
+			}
+		}
+	},
+	"Contentful-mcp": {
+		"url": "https://github.com/ivo-toby/contentful-mcp",
+		"description": "Read, update, delete, publish content in your [Contentful](https://contentful.com) space(s) from this MCP Server.",
+		"mcpServers": {
+			"contentful": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@ivotoby/contentful-management-mcp-server"
+				],
+				"env": {
+					"CONTENTFUL_MANAGEMENT_ACCESS_TOKEN": "<Your CMA token>"
+				}
+			}
+		}
+	},
+	"Dappier": {
+		"url": "https://github.com/DappierAI/dappier-mcp",
+		"description": "Connect LLMs to real-time, rights-cleared, proprietary data from trusted sources. Access specialized models for Real-Time Web Search, News, Sports, Financial Data, Crypto, and premium publisher content. Explore data models at [marketplace.dappier.com](https://marketplace.dappier.com/marketplace).",
+		"mcpServers": {
+			"dappier": {
+				"command": "uvx",
+				"args": [
+					"dappier-mcp"
+				],
+				"env": {
+					"DAPPIER_API_KEY": "YOUR_API_KEY_HERE"
+				}
+			}
+		}
+	},
+	"Datadog": {
+		"url": "https://github.com/GeLi2001/datadog-mcp-server",
+		"description": "Datadog MCP Server for application tracing, monitoring, dashboard, incidents queries built on official datadog api.",
+		"mcpServers": {
+			"datadog": {
+				"command": "npx",
+				"args": [
+					"datadog-mcp-server",
+					"--apiKey",
+					"<YOUR_API_KEY>",
+					"--appKey",
+					"<YOUR_APP_KEY>",
+					"--site",
+					"<YOUR_DD_SITE>(e.g us5.datadoghq.com)"
+				]
+			}
+		}
+	},
+	"Dataset Viewer": {
+		"url": "https://github.com/privetin/dataset-viewer",
+		"description": "Browse and analyze Hugging Face datasets with features like search, filtering, statistics, and data export",
+		"mcpServers": {
+			"dataset-viewer": {
+				"command": "uv",
+				"args": [
+					"run",
+					"dataset-viewer"
+				]
+			}
+		}
+	},
+	"Descope": {
+		"url": "https://github.com/descope-sample-apps/descope-mcp-server",
+		"description": "An MCP server to integrate with [Descope](https://descope.com) to search audit logs, manage users, and more.",
+		"mcpServers": {
+			"descope": {
+				"command": "node",
+				"args": [
+					"/path/to/descope-mcp-server/build/index.js"
+				],
+				"env": {
+					"DESCOPE_PROJECT_ID": "your-descope-project-id-here",
+					"DESCOPE_MANAGEMENT_KEY": "your-descope-management-key-here"
+				}
+			}
+		}
+	},
+	"Dify": {
+		"url": "https://github.com/YanxingLiu/dify-mcp-server",
+		"description": "A simple implementation of an MCP server for dify workflows.",
+		"mcpServers": {
+			"mcp-server-rag-web-browser": {
+				"command": "uv",
+				"args": [
+					"--directory",
+					"${DIFY_MCP_SERVER_PATH}",
+					"run",
+					"dify_mcp_server"
+				],
+				"env": {
+					"CONFIG_PATH": "$CONFIG_PATH"
+				}
+			}
+		}
+	},
+	"Discord": {
+		"url": "https://github.com/v-3/discordmcp",
+		"description": "A MCP server to connect to Discord guilds through a bot and read and write messages in channels",
+		"mcpServers": {
+			"discord": {
+				"command": "node",
+				"args": [
+					"path/to/discordmcp/build/index.js"
+				],
+				"env": {
+					"DISCORD_TOKEN": "your_discord_bot_token_here"
+				}
+			}
+		}
+	},
+	"Discourse": {
+		"url": "https://github.com/AshDevFr/discourse-mcp-server",
+		"description": "A MCP server to search Discourse posts on a Discourse forum.",
+		"mcpServers": {
+			"discourse": {
+				"command": "docker",
+				"args": [
+					"run",
+					"-i",
+					"--rm",
+					"-e",
+					"DISCOURSE_API_URL=https://try.discourse.org",
+					"-e",
+					"DISCOURSE_API_KEY=1234",
+					"-e",
+					"DISCOURSE_API_USERNAME=ash",
+					"ashdev/discourse-mcp-server"
+				]
+			}
+		}
+	},
+	"Drupal": {
+		"url": "https://github.com/Omedia/mcp-server-drupal",
+		"description": "Server for interacting with [Drupal](https://www.drupal.org/project/mcp) using STDIO transport layer.",
+		"mcpServers": {
+			"mcp-server-drupal": {
+				"command": "__BINARY_PATH__",
+				"args": [
+					"--drupal-url",
+					"__DRUPAL_BASE_URL__"
+				],
+				"env": {}
+			}
+		}
+	},
+	"EdgeOne Pages MCP": {
+		"url": "https://github.com/TencentEdgeOne/edgeone-pages-mcp",
+		"description": "An MCP service for deploying HTML content to EdgeOne Pages and obtaining a publicly accessible URL.",
+		"mcpServers": {
+			"edgeone-pages-mcp-server": {
+				"command": "npx",
+				"args": [
+					"edgeone-pages-mcp"
+				]
+			}
+		}
+	},
+	"ElevenLabs": {
+		"url": "https://github.com/mamertofabian/elevenlabs-mcp-server",
+		"description": "A server that integrates with ElevenLabs text-to-speech API capable of generating full voiceovers with multiple voices.",
+		"mcpServers": {
+			"elevenlabs": {
+				"command": "uvx",
+				"args": [
+					"elevenlabs-mcp-server"
+				],
+				"env": {
+					"ELEVENLABS_API_KEY": "your-api-key",
+					"ELEVENLABS_VOICE_ID": "your-voice-id",
+					"ELEVENLABS_MODEL_ID": "eleven_flash_v2",
+					"ELEVENLABS_STABILITY": "0.5",
+					"ELEVENLABS_SIMILARITY_BOOST": "0.75",
+					"ELEVENLABS_STYLE": "0.1",
+					"ELEVENLABS_OUTPUT_DIR": "output"
+				}
+			}
+		}
+	},
+	"EVM MCP Server": {
+		"url": "https://github.com/mcpdotdirect/evm-mcp-server",
+		"description": "Comprehensive blockchain services for 30+ EVM networks, supporting native tokens, ERC20, NFTs, smart contracts, transactions, and ENS resolution.",
+		"mcpServers": {
+			"evm-mcp-server": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@mcpdotdirect/evm-mcp-server"
+				]
+			},
+			"evm-mcp-http": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@mcpdotdirect/evm-mcp-server",
+					"--http"
+				]
+			}
+		}
+	},
+	"Excel": {
+		"url": "https://github.com/haris-musa/excel-mcp-server",
+		"description": "Excel manipulation including data reading/writing, worksheet management, formatting, charts, and pivot table.",
+		"mcpServers": {
+			"excel": {
+				"url": "http://localhost:8000/sse",
+				"env": {
+					"EXCEL_FILES_PATH": "/path/to/excel/files"
+				}
+			}
+		}
+	},
+	"Fantasy PL": {
+		"url": "https://github.com/rishijatia/fantasy-pl-mcp",
+		"description": "Give your coding agent direct access to up-to date Fantasy Premier League data",
+		"mcpServers": {
+			"fantasy-pl": {
+				"command": "python",
+				"args": [
+					"-m",
+					"fpl_mcp"
+				]
+			}
+		}
+	},
+	"fastn.ai – Unified API MCP Server": {
+		"url": "https://github.com/fastnai/mcp-fastn",
+		"description": "A remote, dynamic MCP server with a unified API that connects to 1,000+ tools, actions, and workflows, featuring built-in authentication and monitoring.",
+		"mcpServers": {
+			"fastn": {
+				"command": "/path/to/fastn-mcp-server",
+				"args": [
+					"--api_key",
+					"YOUR_API_KEY",
+					"--space_id",
+					"YOUR_WORKSPACE_ID"
+				]
+			}
+		}
+	},
+	"Fetch": {
+		"url": "https://github.com/zcaceres/fetch-mcp",
+		"description": "A server that flexibly fetches HTML, JSON, Markdown, or plaintext.",
+		"mcpServers": {
+			"fetch": {
+				"command": "node",
+				"args": [
+					"{ABSOLUTE PATH TO FILE HERE}/dist/index.js"
+				]
+			}
+		}
+	},
+	"Figma": {
+		"url": "https://github.com/GLips/Figma-Context-MCP",
+		"description": "Give your coding agent direct access to Figma file data, helping it one-shot design implementation.",
+		"mcpServers": {
+			"Framelink Figma MCP": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"figma-developer-mcp",
+					"--figma-api-key=YOUR-KEY",
+					"--stdio"
+				]
+			}
+		}
+	},
+	"FireCrawl": {
+		"url": "https://github.com/vrknetha/mcp-server-firecrawl",
+		"description": "Advanced web scraping with JavaScript rendering, PDF support, and smart rate limiting",
+		"mcpServers": {
+			"firecrawl-mcp": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"firecrawl-mcp"
+				],
+				"env": {
+					"FIRECRAWL_API_KEY": "YOUR-API-KEY"
+				}
+			}
+		}
+	},
+	"FlightRadar24": {
+		"url": "https://github.com/sunsetcoder/flightradar24-mcp-server",
+		"description": "A Claude Desktop MCP server that helps you track flights in real-time using Flightradar24 data.",
+		"mcpServers": {
+			"flightradar24-server": {
+				"command": "node",
+				"args": [
+					"/Users/<username>/<FULL_PATH...>/flightradar24-mcp-server/dist/index.js"
+				],
+				"env": {
+					"FR24_API_KEY": "your_api_key_here",
+					"FR24_API_URL": "https://fr24api.flightradar24.com"
+				}
+			}
+		}
+	},
+	"Ghost": {
+		"url": "https://github.com/MFYDev/ghost-mcp",
+		"description": "A Model Context Protocol (MCP) server for interacting with Ghost CMS through LLM interfaces like Claude.",
+		"mcpServers": {
+			"ghost": {
+				"command": "/Users/username/.local/bin/uv",
+				"args": [
+					"--directory",
+					"/path/to/ghost-mcp",
+					"run",
+					"src/main.py"
+				],
+				"env": {
+					"GHOST_API_URL": "your_ghost_api_url",
+					"GHOST_STAFF_API_KEY": "your_staff_api_key"
+				}
+			}
+		}
+	},
+	"Github Actions": {
+		"url": "https://github.com/ko1ynnky/github-actions-mcp-server",
+		"description": "A Model Context Protocol (MCP) server for interacting with Github Actions.",
+		"mcpServers": {
+			"github-actions": {
+				"command": "node",
+				"args": [
+					"<path-to-mcp-server>/dist/index.js"
+				],
+				"env": {
+					"GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"
+				}
+			}
+		}
+	},
+	"Gmail": {
+		"url": "https://github.com/GongRzhe/Gmail-MCP-Server",
+		"description": "A Model Context Protocol (MCP) server for Gmail integration in Claude Desktop with auto authentication support.",
+		"mcpServers": {
+			"gmail": {
+				"command": "npx",
+				"args": [
+					"@gongrzhe/server-gmail-autoauth-mcp"
+				]
+			}
+		}
+	},
+	"Gmail Headless": {
+		"url": "https://github.com/baryhuang/mcp-headless-gmail",
+		"description": "Remote hostable MCP server that can get and send Gmail messages without local credential or file system setup.",
+		"mcpServers": {
+			"gmail": {
+				"command": "docker",
+				"args": [
+					"run",
+					"-i",
+					"--rm",
+					"buryhuang/mcp-headless-gmail:latest"
+				]
+			}
+		}
+	},
+	"Golang Filesystem Server": {
+		"url": "https://github.com/mark3labs/mcp-filesystem-server",
+		"description": "Secure file operations with configurable access controls built with Go!",
+		"mcpServers": {
+			"filesystem": {
+				"command": "mcp-filesystem-server",
+				"args": [
+					"/Users/username/Desktop",
+					"/path/to/other/allowed/dir"
+				]
+			}
+		}
+	},
+	"Goodnews": {
+		"url": "https://github.com/VectorInstitute/mcp-goodnews",
+		"description": "A simple MCP server that delivers curated positive and uplifting news stories.",
+		"mcpServers": {
+			"Goodnews": {
+				"command": "<absolute-path-to-bin>/uv",
+				"args": [
+					"--directory",
+					"<absolute-path-to-cloned-repo>/mcp-goodnews/src/mcp_goodnews",
+					"run",
+					"server.py"
+				],
+				"env": {
+					"NEWS_API_KEY": "<newsapi-api-key>",
+					"COHERE_API_KEY": "<cohere-api-key>"
+				}
+			}
+		}
+	},
+	"Google Calendar": {
+		"url": "https://github.com/v-3/google-calendar",
+		"description": "Integration with Google Calendar to check schedules, find time, and add/delete events",
+		"mcpServers": {
+			"google-calendar": {
+				"command": "node",
+				"args": [
+					"/ABSOLUTE/PATH/TO/YOUR/build/index.js"
+				],
+				"env": {
+					"GOOGLE_CLIENT_ID": "your_client_id_here",
+					"GOOGLE_CLIENT_SECRET": "your_client_secret_here",
+					"GOOGLE_REDIRECT_URI": "http://localhost",
+					"GOOGLE_REFRESH_TOKEN": "your_refresh_token_here"
+				}
+			}
+		}
+	},
+	"Google Calendar Mcp": {
+		"url": "https://github.com/nspady/google-calendar-mcp",
+		"description": "Google Calendar MCP Server for managing Google calendar events. Also supports searching for events by attributes like title and location.",
+		"mcpServers": {
+			"google-calendar": {
+				"command": "node",
+				"args": [
+					"<absolute-path-to-project-folder>/build/index.js"
+				]
+			}
+		}
+	},
+	"Google Custom Search": {
+		"url": "https://github.com/adenot/mcp-google-search",
+		"description": "Provides Google Search results via the Google Custom Search API",
+		"mcpServers": {
+			"google-search": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@adenot/mcp-google-search"
+				],
+				"env": {
+					"GOOGLE_API_KEY": "your-api-key-here",
+					"GOOGLE_SEARCH_ENGINE_ID": "your-search-engine-id-here"
+				}
+			}
+		}
+	},
+	"Google Tasks": {
+		"url": "https://github.com/zcaceres/gtasks-mcp",
+		"description": "Google Tasks API Model Context Protocol Server.",
+		"mcpServers": {
+			"gtasks": {
+				"command": "/opt/homebrew/bin/node",
+				"args": [
+					"{ABSOLUTE PATH TO FILE HERE}/dist/index.js"
+				]
+			}
+		}
+	},
+	"GraphQL Schema": {
+		"url": "https://github.com/hannesj/mcp-graphql-schema",
+		"description": "Allow LLMs to explore large GraphQL schemas without bloating the context.",
+		"mcpServers": {
+			"GraphQL Schema": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"mcp-graphql-schema",
+					"/ABSOLUTE/PATH/TO/schema.graphqls"
+				]
+			}
+		}
+	},
+	"HDW LinkedIn": {
+		"url": "https://github.com/horizondatawave/hdw-mcp-server",
+		"description": "Access to profile data and management of user account with [HorizonDataWave.ai](https://horizondatawave.ai/).",
+		"mcpServers": {
+			"hdw": {
+				"command": "npx",
+				"args": [
+					"@horizondatawave/mcp"
+				],
+				"env": {
+					"HDW_ACCESS_TOKEN": "YOUR_HD_W_ACCESS_TOKEN",
+					"HDW_ACCOUNT_ID": "YOUR_HD_W_ACCOUNT_ID"
+				}
+			}
+		}
+	},
+	"Home Assistant": {
+		"url": "https://github.com/voska/hass-mcp",
+		"description": "Docker-ready MCP server for Home Assistant with entity management, domain summaries, automation support, and guided conversations. Includes pre-built container images for easy installation.",
+		"mcpServers": {
+			"hass-mcp": {
+				"command": "docker",
+				"args": [
+					"run",
+					"-i",
+					"--rm",
+					"-e",
+					"HA_URL",
+					"-e",
+					"HA_TOKEN",
+					"voska/hass-mcp"
+				],
+				"env": {
+					"HA_URL": "http://homeassistant.local:8123",
+					"HA_TOKEN": "YOUR_LONG_LIVED_TOKEN"
+				}
+			}
+		}
+	},
+	"HubSpot": {
+		"url": "https://github.com/buryhuang/mcp-hubspot",
+		"description": "HubSpot CRM integration for managing contacts and companies. Create and retrieve CRM data directly through Claude chat.",
+		"mcpServers": {
+			"hubspot": {
+				"command": "docker",
+				"args": [
+					"run",
+					"-i",
+					"--rm",
+					"-e",
+					"HUBSPOT_ACCESS_TOKEN=your_access_token_here",
+					"buryhuang/mcp-hubspot:latest"
+				]
+			}
+		}
+	},
+	"Hyperliquid": {
+		"url": "https://github.com/mektigboy/server-hyperliquid",
+		"description": "An MCP server implementation that integrates the Hyperliquid SDK for exchange data.",
+		"mcpServers": {
+			"brave-search": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@mektigboy/server-hyperliquid"
+				]
+			}
+		}
+	},
+	"iFlytek Workflow": {
+		"url": "https://github.com/iflytek/ifly-workflow-mcp-server",
+		"description": "Connect to iFlytek Workflow via the MCP server and run your own Agent.",
+		"mcpServers": {
+			"ifly-workflow-mcp-server": {
+				"command": "uvx",
+				"args": [
+					"--from",
+					"git+https://github.com/iflytek/ifly-workflow-mcp-server",
+					"ifly_workflow_mcp_server"
+				],
+				"env": {
+					"CONFIG_PATH": "$CONFIG_PATH"
+				}
+			}
+		}
+	},
+	"Image Generation": {
+		"url": "https://github.com/GongRzhe/Image-Generation-MCP-Server",
+		"description": "This MCP server provides image generation capabilities using the Replicate Flux model.",
+		"mcpServers": {
+			"image-gen": {
+				"command": "npx",
+				"args": [
+					"@gongrzhe/image-gen-server"
+				],
+				"env": {
+					"REPLICATE_API_TOKEN": "your-replicate-api-token",
+					"MODEL": "alternative-model-name"
+				},
+				"disabled": false,
+				"autoApprove": []
+			}
+		}
+	},
+	"InfluxDB": {
+		"url": "https://github.com/idoru/influxdb-mcp-server",
+		"description": "Run queries against InfluxDB OSS API v2.",
+		"mcpServers": {
+			"influxdb": {
+				"command": "npx",
+				"args": [
+					"influxdb-mcp-server"
+				],
+				"env": {
+					"INFLUXDB_TOKEN": "your_token",
+					"INFLUXDB_URL": "http://localhost:8086",
+					"INFLUXDB_ORG": "your_org"
+				}
+			}
+		}
+	},
+	"iOS Simulator": {
+		"url": "https://github.com/InditexTech/mcp-server-simulator-ios-idb",
+		"description": "A Model Context Protocol (MCP) server that enables LLMs to interact with iOS simulators (iPhone, iPad, etc.) through natural language commands.",
+		"mcpServers": {
+			"ios-simulator": {
+				"command": "node",
+				"args": [
+					"/path/to/mcp-server-simulator-ios-idb/dist/index.js"
+				],
+				"env": {}
+			}
+		}
+	},
+	"iTerm MCP": {
+		"url": "https://github.com/ferrislucas/iterm-mcp",
+		"description": "Integration with iTerm2 terminal emulator for macOS, enabling LLMs to execute and monitor terminal commands.",
+		"mcpServers": {
+			"iterm-mcp": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"iterm-mcp"
+				]
+			}
+		}
+	},
+	"JDBC": {
+		"url": "https://github.com/quarkiverse/quarkus-mcp-servers/tree/main/jdbc",
+		"description": "Connect to any JDBC-compatible database and query, insert, update, delete, and more. Supports MySQL, PostgreSQL, Oracle, SQL Server, sqllite and [more](https://github.com/quarkiverse/quarkus-mcp-servers/tree/main/jdbc#supported-jdbc-variants).",
+		"mcpServers": {
+			"jdbc": {
+				"command": "jbang",
+				"args": [
+					"jdbc@quarkiverse/quarkus-mcp-servers",
+					"[jdbc_url]"
+				]
+			}
+		}
+	},
+	"KiCad MCP": {
+		"url": "https://github.com/lamaalrajih/kicad-mcp",
+		"description": "MCP server for KiCad on Mac, Windows, and Linux.",
+		"mcpServers": {
+			"kicad": {
+				"command": "/ABSOLUTE/PATH/TO/YOUR/PROJECT/kicad-mcp/venv/bin/python",
+				"args": [
+					"/ABSOLUTE/PATH/TO/YOUR/PROJECT/kicad-mcp/main.py"
+				]
+			}
+		}
+	},
+	"Keycloak MCP": {
+		"url": "https://github.com/ChristophEnglisch/keycloak-model-context-protocol",
+		"description": "This MCP server enables natural language interaction with Keycloak for user and realm management including creating, deleting, and listing users and realms.",
+		"mcpServers": {
+			"keycloak": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"keycloak-model-context-protocol"
+				],
+				"env": {
+					"KEYCLOAK_URL": "http://localhost:8080",
+					"KEYCLOAK_ADMIN": "admin",
+					"KEYCLOAK_ADMIN_PASSWORD": "admin"
+				}
+			}
+		}
+	},
+	"kintone": {
+		"url": "https://github.com/macrat/mcp-server-kintone",
+		"description": "Manage records and apps in [kintone](https://kintone.com) through LLM tools.",
+		"mcpServers": {
+			"kintone": {
+				"command": "C:\\path\to\\mcp-server-kintone.exe",
+				"env": {
+					"KINTONE_BASE_URL": "https://<domain>.cybozu.com",
+					"KINTONE_USERNAME": "<your username>",
+					"KINTONE_PASSWORD": "<your password>",
+					"KINTONE_API_TOKEN": "<your api token>, <another api token>, ...",
+					"KINTONE_ALLOW_APPS": "1, 2, 3, ...",
+					"KINTONE_DENY_APPS": "4, 5, ..."
+				}
+			}
+		}
+	},
+	"Kong Konnect": {
+		"url": "https://github.com/Kong/mcp-konnect",
+		"description": "A Model Context Protocol (MCP) server for interacting with Kong Konnect APIs, allowing AI assistants to query and analyze Kong Gateway configurations, traffic, and analytics.",
+		"mcpServers": {
+			"kong-konnect": {
+				"command": "node",
+				"args": [
+					"/absolute/path/to/mcp-konnect/build/index.js"
+				],
+				"env": {
+					"KONNECT_ACCESS_TOKEN": "kpat_api_key_here",
+					"KONNECT_REGION": "us"
+				}
+			}
+		}
+	},
+	"Kubernetes": {
+		"url": "https://github.com/Flux159/mcp-server-kubernetes",
+		"description": "Connect to Kubernetes cluster and manage pods, deployments, and services.",
+		"mcpServers": {
+			"kubernetes": {
+				"command": "npx",
+				"args": [
+					"mcp-server-kubernetes"
+				]
+			}
+		}
+	},
+	"Kubernetes and OpenShift": {
+		"url": "https://github.com/manusa/kubernetes-mcp-server",
+		"description": "A powerful Kubernetes MCP server with additional support for OpenShift. Besides providing CRUD operations for any Kubernetes resource, this server provides specialized tools to interact with your cluster.",
+		"mcpServers": {
+			"kubernetes": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"kubernetes-mcp-server@latest"
+				]
+			}
+		}
+	},
+	"Langflow-DOC-QA-SERVER": {
+		"url": "https://github.com/GongRzhe/Langflow-DOC-QA-SERVER",
+		"description": "A Model Context Protocol server for document Q&A powered by Langflow. It demonstrates core MCP concepts by providing a simple interface to query documents through a Langflow backend.",
+		"mcpServers": {
+			"langflow-doc-qa-server": {
+				"command": "node",
+				"args": [
+					"/path/to/doc-qa-server/build/index.js"
+				],
+				"env": {
+					"API_ENDPOINT": "http://127.0.0.1:7860/api/v1/run/480ec7b3-29d2-4caa-b03b-e74118f35fac"
+				}
+			}
+		}
+	},
+	"mac-messages-mcp": {
+		"url": "https://github.com/carterlasalle/mac_messages_mcp",
+		"description": "An MCP server that securely interfaces with your iMessage database via the Model Context Protocol (MCP), allowing LLMs to query and analyze iMessage conversations. It includes robust phone number validation, attachment processing, contact management, group chat handling, and full support for sending and receiving messages.",
+		"mcpServers": {
+			"messages": {
+				"command": "uvx",
+				"args": [
+					"mac-messages-mcp"
+				]
+			}
+		}
+	},
+	"MCP Compass": {
+		"url": "https://github.com/liuyoshio/mcp-compass",
+		"description": "Suggest the right MCP server for your needs",
+		"mcpServers": {
+			"mcp-compass": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@liuyoshio/mcp-compass"
+				]
+			}
+		}
+	},
+	"MCP Create": {
+		"url": "https://github.com/tesla0225/mcp-create",
+		"description": "A dynamic MCP server management service that creates, runs, and manages Model Context Protocol servers on-the-fly.",
+		"mcpServers": {
+			"mcp-create": {
+				"command": "docker",
+				"args": [
+					"run",
+					"-i",
+					"--rm",
+					"mcp-create"
+				]
+			}
+		}
+	},
+	"mcp-k8s-go": {
+		"url": "https://github.com/strowk/mcp-k8s-go",
+		"description": "Golang-based Kubernetes server for MCP to browse pods and their logs, events, namespaces and more. Built to be extensible.",
+		"mcpServers": {
+			"mcp_k8s": {
+				"command": "mcp-k8s",
+				"args": []
+			}
+		}
+	},
+	"mcp-proxy": {
+		"url": "https://github.com/sparfenyuk/mcp-proxy",
+		"description": "Connect to MCP servers that run on SSE transport, or expose stdio servers as an SSE server.",
+		"mcpServers": {
+			"mcp-proxy": {
+				"command": "mcp-proxy",
+				"args": [
+					"http://example.io/sse"
+				],
+				"env": {
+					"API_ACCESS_TOKEN": "access-token"
+				}
+			}
+		}
+	},
+	"Membase": {
+		"url": "https://github.com/unibaseio/membase-mcp",
+		"description": "Save and query your agent memory in distributed way by Membase.",
+		"mcpServers": {
+			"membase": {
+				"command": "uv",
+				"args": [
+					"--directory",
+					"path/to/membase-mcp",
+					"run",
+					"src/membase_mcp/server.py"
+				],
+				"env": {
+					"MEMBASE_ACCOUNT": "your account, 0x...",
+					"MEMBASE_CONVERSATION_ID": "your conversation id, should be unique",
+					"MEMBASE_ID": "your sub account, any string"
+				}
+			}
+		}
+	},
+	"MongoDB": {
+		"url": "https://github.com/kiliczsh/mcp-mongo-server",
+		"description": "A Model Context Protocol Server for MongoDB.",
+		"mcpServers": {
+			"mongodb-env": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"mcp-mongo-server"
+				],
+				"env": {
+					"MCP_MONGODB_URI": "mongodb://muhammed:kilic@localhost:27017/database",
+					"MCP_MONGODB_READONLY": "true"
+				}
+			}
+		}
+	},
+	"Multicluster-MCP-Sever": {
+		"url": "https://github.com/yanmxa/multicluster-mcp-server",
+		"description": "The gateway for GenAI systems to interact with multiple Kubernetes clusters.",
+		"mcpServers": {
+			"y": {
+				"command": "/path/to/multicluster-mcp-server/build/index.js"
+			}
+		}
+	},
+	"National Parks": {
+		"url": "https://github.com/KyrieTangSheng/mcp-server-nationalparks",
+		"description": "The server provides latest information of park details, alerts, visitor centers, campgrounds, hiking trails, and events for U.S. National Parks.",
+		"mcpServers": {
+			"nationalparks": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"mcp-server-nationalparks"
+				],
+				"env": {
+					"NPS_API_KEY": "YOUR_NPS_API_KEY"
+				}
+			}
+		}
+	},
+	"NS Travel Information": {
+		"url": "https://github.com/r-huijts/ns-mcp-server",
+		"description": "Access Dutch Railways (NS) real-time train travel information and disruptions through the official NS API.",
+		"mcpServers": {
+			"ns-server": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"ns-mcp-server"
+				],
+				"env": {
+					"NS_API_KEY": "your_api_key_here"
+				}
+			}
+		}
+	},
+	"Neo4j": {
+		"url": "https://github.com/da-okazaki/mcp-neo4j-server",
+		"description": "A community built server that interacts with Neo4j Graph Database.",
+		"mcpServers": {
+			"neo4j": {
+				"command": "npx",
+				"args": [
+					"@alanse/mcp-neo4j-server"
+				],
+				"env": {
+					"NEO4J_URI": "bolt://localhost:7687",
+					"NEO4J_USERNAME": "neo4j",
+					"NEO4J_PASSWORD": "your-password"
+				}
+			}
+		}
+	},
+	"Neovim": {
+		"url": "https://github.com/bigcodegen/mcp-neovim-server",
+		"description": "An MCP Server for your Neovim session.",
+		"mcpServers": {
+			"MCP Neovim Server": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"mcp-neovim-server"
+				],
+				"env": {
+					"ALLOW_SHELL_COMMANDS": "true",
+					"NVIM_SOCKET_PATH": "/tmp/nvim"
+				}
+			}
+		}
+	},
+	"obsidian-mcp": {
+		"url": "https://github.com/StevenStavrakis/obsidian-mcp",
+		"description": "(by Steven Stavrakis) An MCP server for Obsidian.md with tools for searching, reading, writing, and organizing notes.",
+		"mcpServers": {
+			"obsidian": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"obsidian-mcp",
+					"/path/to/your/vault",
+					"/path/to/your/vault2"
+				]
+			}
+		}
+	},
+	"OceanBase": {
+		"url": "https://github.com/yuanoOo/oceanbase_mcp_server",
+		"description": "(by yuanoOo) A Model Context Protocol (MCP) server that enables secure interaction with OceanBase databases.",
+		"mcpServers": {
+			"oceanbase": {
+				"command": "uv",
+				"args": [
+					"--directory",
+					"path/to/oceanbase_mcp_server",
+					"run",
+					"oceanbase_mcp_server"
+				],
+				"env": {
+					"OB_HOST": "localhost",
+					"OB_PORT": "2881",
+					"OB_USER": "your_username",
+					"OB_PASSWORD": "your_password",
+					"OB_DATABASE": "your_database"
+				}
+			}
+		}
+	},
+	"Okta": {
+		"url": "https://github.com/kapilduraphe/okta-mcp-server",
+		"description": "Interact with Okta API.",
+		"mcpServers": {
+			"okta": {
+				"command": "node",
+				"args": [
+					"PATH_TO_PROJECT_DIRECTORY/dist/index.js"
+				],
+				"env": {
+					"OKTA_ORG_URL": "https://your-domain.okta.com",
+					"OKTA_API_TOKEN": "your-api-token"
+				}
+			}
+		}
+	},
+	"OpenAPI Schema": {
+		"url": "https://github.com/hannesj/mcp-openapi-schema",
+		"description": "Allow LLMs to explore large [OpenAPI](https://www.openapis.org/) schemas without bloating the context.",
+		"mcpServers": {
+			"OpenAPI Schema": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"mcp-openapi-schema",
+					"/ABSOLUTE/PATH/TO/openapi.yaml"
+				]
+			}
+		}
+	},
+	"OpenDota": {
+		"url": "https://github.com/asusevski/opendota-mcp-server",
+		"description": "Interact with OpenDota API to retrieve Dota 2 match data, player statistics, and more.",
+		"mcpServers": {
+			"opendota": {
+				"command": "wsl.exe",
+				"args": [
+					"--",
+					"bash",
+					"-c",
+					"cd ~/opendota-mcp-server && source .venv/bin/activate && python src/opendota_server/server.py"
+				]
+			}
+		}
+	},
+	"OpenRPC": {
+		"url": "https://github.com/shanejonas/openrpc-mpc-server",
+		"description": "Interact with and discover JSON-RPC APIs via [OpenRPC](https://open-rpc.org).",
+		"mcpServers": {
+			"openrpc": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"openrpc-mcp-server"
+				]
+			}
+		}
+	},
+	"Open Strategy Partners Marketing Tools": {
+		"url": "https://github.com/open-strategy-partners/osp_marketing_tools",
+		"description": "Content editing codes, value map, and positioning tools for product marketing.",
+		"mcpServers": {
+			"osp_marketing_tools": {
+				"command": "uvx",
+				"args": [
+					"--from",
+					"git+https://github.com/open-strategy-partners/osp_marketing_tools@main",
+					"osp_marketing_tools"
+				]
+			}
+		}
+	},
+	"PIF": {
+		"url": "https://github.com/hungryrobot1/MCP-PIF",
+		"description": "A Personal Intelligence Framework (PIF), providing tools for file operations, structured reasoning, and journal-based documentation to support continuity and evolving human-AI collaboration across sessions.",
+		"mcpServers": {
+			"mcp-pif": {
+				"command": "node",
+				"args": [
+					"path/to/your/mcp-pif/build/index.js"
+				],
+				"cwd": "path/to/your/mcp-pif",
+				"env": {}
+			}
+		}
+	},
+	"Placid.app": {
+		"url": "https://github.com/felores/placid-mcp-server",
+		"description": "Generate image and video creatives using Placid.app templates",
+		"mcpServers": {
+			"placid": {
+				"command": "npx",
+				"args": [
+					"@felores/placid-mcp-server"
+				],
+				"env": {
+					"PLACID_API_TOKEN": "your-api-token"
+				}
+			}
+		}
+	},
+	"Playwright": {
+		"url": "https://github.com/executeautomation/mcp-playwright",
+		"description": "This MCP Server will help you run browser automation and webscraping using Playwright",
+		"mcpServers": {
+			"playwright": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@executeautomation/playwright-mcp-server"
+				]
+			}
+		}
+	},
+	"Postman": {
+		"url": "https://github.com/shannonlal/mcp-postman",
+		"description": "MCP server for running Postman Collections locally via Newman. Allows for simple execution of Postman Server and returns the results of whether the collection passed all the tests.",
+		"mcpServers": {
+			"postman-runner": {
+				"command": "node",
+				"args": [
+					"/absolute/path/to/mcp-postman/build/index.js"
+				]
+			}
+		}
+	},
+	"Productboard": {
+		"url": "https://github.com/kenjihikmatullah/productboard-mcp",
+		"description": "Integrate the Productboard API into agentic workflows via MCP.",
+		"mcpServers": {
+			"productboard": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"productboard-mcp"
+				],
+				"env": {
+					"PRODUCTBOARD_ACCESS_TOKEN": "<YOUR_TOKEN>"
+				}
+			}
+		}
+	},
+	"Prometheus": {
+		"url": "https://github.com/pab1it0/prometheus-mcp-server",
+		"description": "Query and analyze Prometheus - open-source monitoring system.",
+		"mcpServers": {
+			"prometheus": {
+				"command": "uv",
+				"args": [
+					"--directory",
+					"<full path to prometheus-mcp-server directory>",
+					"run",
+					"src/prometheus_mcp_server/main.py"
+				],
+				"env": {
+					"PROMETHEUS_URL": "http://your-prometheus-server:9090",
+					"PROMETHEUS_USERNAME": "your_username",
+					"PROMETHEUS_PASSWORD": "your_password"
+				}
+			}
+		}
+	},
+	"QGIS": {
+		"url": "https://github.com/jjsantos01/qgis_mcp",
+		"description": "connects QGIS to Claude AI through the MCP. This integration enables prompt-assisted project creation, layer loading, code execution, and more.",
+		"mcpServers": {
+			"qgis": {
+				"command": "uv",
+				"args": [
+					"--directory",
+					"/ABSOLUTE/PATH/TO/PARENT/REPO/FOLDER/qgis_mcp/src/qgis_mcp",
+					"run",
+					"qgis_mcp_server.py"
+				]
+			}
+		}
+	},
+	"QuickChart": {
+		"url": "https://github.com/GongRzhe/Quickchart-MCP-Server",
+		"description": "A Model Context Protocol server for generating charts using QuickChart.io",
+		"mcpServers": {
+			"quickchart-server": {
+				"command": "node",
+				"args": [
+					"/path/to/quickchart-server/build/index.js"
+				]
+			}
+		}
+	},
+	"Qwen_Max": {
+		"url": "https://github.com/66julienmartin/MCP-server-Qwen_Max",
+		"description": "A Model Context Protocol (MCP) server implementation for the Qwen models.",
+		"mcpServers": {
+			"qwen_max": {
+				"command": "node",
+				"args": [
+					"/path/to/Qwen_Max/build/index.js"
+				],
+				"env": {
+					"DASHSCOPE_API_KEY": "your-api-key-here"
+				}
+			}
+		}
+	},
+	"Redis": {
+		"url": "https://github.com/GongRzhe/REDIS-MCP-Server",
+		"description": "Redis database operations and caching microservice server with support for key-value operations, expiration management, and pattern-based key listing.",
+		"mcpServers": {
+			"redis": {
+				"command": "npx",
+				"args": [
+					"@gongrzhe/server-redis-mcp@1.0.0",
+					"redis://localhost:6379"
+				]
+			}
+		}
+	},
+	"Replicate": {
+		"url": "https://github.com/deepfates/mcp-replicate",
+		"description": "Search, run and manage machine learning models on Replicate through a simple tool-based interface. Browse models, create predictions, track their status, and handle generated images.",
+		"mcpServers": {
+			"replicate": {
+				"command": "mcp-replicate",
+				"env": {
+					"REPLICATE_API_TOKEN": "your_token_here"
+				}
+			}
+		}
+	},
+	"Rquest": {
+		"url": "https://github.com/xxxbrian/mcp-rquest",
+		"description": "An MCP server providing realistic browser-like HTTP request capabilities with accurate TLS/JA3/JA4 fingerprints for bypassing anti-bot measures.",
+		"mcpServers": {
+			"http-rquest": {
+				"command": "uvx",
+				"args": [
+					"mcp-rquest"
+				]
+			}
+		}
+	},
+	"Rijksmuseum": {
+		"url": "https://github.com/r-huijts/rijksmuseum-mcp",
+		"description": "Interface with the Rijksmuseum API to search artworks, retrieve artwork details, access image tiles, and explore user collections.",
+		"mcpServers": {
+			"rijksmuseum-server": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"mcp-server-rijksmuseum"
+				],
+				"env": {
+					"RIJKSMUSEUM_API_KEY": "your_api_key_here"
+				}
+			}
+		}
+	},
+	"scrapling-fetch": {
+		"url": "https://github.com/cyberchitta/scrapling-fetch-mcp",
+		"description": "Access text content from bot-protected websites. Fetches HTML/markdown from sites with anti-automation measures using Scrapling.",
+		"mcpServers": {
+			"Cyber-Chitta": {
+				"command": "uvx",
+				"args": [
+					"scrapling-fetch-mcp"
+				]
+			}
+		}
+	},
+	"SearXNG": {
+		"url": "https://github.com/ihor-sokoliuk/mcp-searxng",
+		"description": "A Model Context Protocol Server for [SearXNG](https://docs.searxng.org)",
+		"mcpServers": {
+			"searxng": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"mcp-searxng"
+				],
+				"env": {
+					"SEARXNG_URL": "YOUR_SEARXNG_INSTANCE_URL"
+				}
+			}
+		}
+	},
+	"ServiceNow": {
+		"url": "https://github.com/osomai/servicenow-mcp",
+		"description": "A MCP server to interact with a ServiceNow instance",
+		"mcpServers": {
+			"ServiceNow": {
+				"command": "/Users/yourusername/dev/servicenow-mcp/.venv/bin/python",
+				"args": [
+					"-m",
+					"servicenow_mcp.cli"
+				],
+				"env": {
+					"SERVICENOW_INSTANCE_URL": "https://your-instance.service-now.com",
+					"SERVICENOW_USERNAME": "your-username",
+					"SERVICENOW_PASSWORD": "your-password",
+					"SERVICENOW_AUTH_TYPE": "basic"
+				}
+			}
+		}
+	},
+	"Shopify": {
+		"url": "https://github.com/GeLi2001/shopify-mcp",
+		"description": "MCP to interact with Shopify API including order, product, customers and so on.",
+		"mcpServers": {
+			"shopify": {
+				"command": "npx",
+				"args": [
+					"shopify-mcp",
+					"--accessToken",
+					"<YOUR_ACCESS_TOKEN>",
+					"--domain",
+					"<YOUR_SHOP>.myshopify.com"
+				]
+			}
+		}
+	},
+	"Solana Agent Kit": {
+		"url": "https://github.com/sendaifun/solana-agent-kit/tree/main/examples/agent-kit-mcp-server",
+		"description": "This MCP server enables LLMs to interact with the Solana blockchain with help of Solana Agent Kit by SendAI, allowing for 40+ protcool actions and growing",
+		"mcpServers": {
+			"agent-kit": {
+				"command": "node",
+				"env": {
+					"RPC_URL": "your_solana_rpc_url_here",
+					"SOLANA_PRIVATE_KEY": "your_private_key_here"
+				},
+				"args": [
+					"/ABSOLUTE/PATH/TO/YOUR/PROJECT"
+				]
+			}
+		}
+	},
+	"TMDB": {
+		"url": "https://github.com/Laksh-star/mcp-server-tmdb",
+		"description": "This MCP server integrates with The Movie Database (TMDB) API to provide movie information, search capabilities, and recommendations.",
+		"mcpServers": {
+			"tmdb": {
+				"command": "/full/path/to/dist/index.js",
+				"env": {
+					"TMDB_API_KEY": "your_api_key_here"
+				}
+			}
+		}
+	},
+	"Telegram": {
+		"url": "https://github.com/chigwell/telegram-mcp",
+		"description": "An MCP server that provides paginated chat reading, message retrieval, and message sending capabilities for Telegram through Telethon integration.",
+		"mcpServers": {
+			"telegram-mcp": {
+				"command": "/full/path/to/uv",
+				"args": [
+					"--directory",
+					"/full/path/to/telegram-mcp-server",
+					"run",
+					"main.py"
+				]
+			}
+		}
+	},
+	"Telegram-Client": {
+		"url": "https://github.com/chaindead/telegram-mcp",
+		"description": "A Telegram API bridge that manages user data, dialogs, messages, drafts, read status, and more for seamless interactions.",
+		"mcpServers": {
+			"telegram": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@chaindead/telegram-mcp"
+				],
+				"env": {
+					"TG_APP_ID": "<your-api-id>",
+					"TG_API_HASH": "<your-api-hash>"
+				}
+			}
+		}
+	},
+	"TFT-Match-Analyzer": {
+		"url": "https://github.com/GeLi2001/tft-mcp-server",
+		"description": "MCP server for teamfight tactics match history & match details fetching, providing user the detailed context for every match.",
+		"mcpServers": {
+			"tft-mcp": {
+				"command": "npx",
+				"args": [
+					"mcp-server-tft",
+					"--apiKey",
+					"<YOUR_RIOT_API_KEY>",
+					"--gameName",
+					"<YOUR_GAME_NAME>",
+					"--tagLine",
+					"<YOUR_TAG_LINE>"
+				]
+			}
+		}
+	},
+	"Ticketmaster": {
+		"url": "https://github.com/delorenj/mcp-server-ticketmaster",
+		"description": "Search for events, venues, and attractions through the Ticketmaster Discovery API",
+		"mcpServers": {
+			"ticketmaster": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@delorenj/mcp-server-ticketmaster"
+				],
+				"env": {
+					"TICKETMASTER_API_KEY": "your-api-key-here"
+				}
+			}
+		}
+	},
+	"TickTick": {
+		"url": "https://github.com/alexarevalo9/ticktick-mcp-server",
+		"description": "A Model Context Protocol (MCP) server designed to integrate with the TickTick task management platform, enabling intelligent context-aware task operations and automation.",
+		"mcpServers": {
+			"ticktick": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@alexarevalo.ai/mcp-server-ticktick"
+				],
+				"env": {
+					"TICKTICK_CLIENT_ID": "<YOUR_CLIENT_ID>",
+					"TICKTICK_CLIENT_SECRET": "<YOUR_CLIENT_SECRET>",
+					"TICKTICK_ACCESS_TOKEN": "<YOUR_ACCESS_TOKEN>"
+				}
+			}
+		}
+	},
+	"Todoist": {
+		"url": "https://github.com/abhiz123/todoist-mcp-server",
+		"description": "Interact with Todoist to manage your tasks.",
+		"mcpServers": {
+			"todoist": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@abhiz123/todoist-mcp-server"
+				],
+				"env": {
+					"TODOIST_API_TOKEN": "your_api_token_here"
+				}
+			}
+		}
+	},
+	"Typesense": {
+		"url": "https://github.com/suhail-ak-s/mcp-typesense-server",
+		"description": "A Model Context Protocol (MCP) server implementation that provides AI models with access to Typesense search capabilities. This server enables LLMs to discover, search, and analyze data stored in Typesense collections.",
+		"mcpServers": {
+			"typesense": {
+				"command": "node",
+				"args": [
+					"~/typesense-mcp-server/dist/index.js",
+					"--host",
+					"your-typesense-host",
+					"--port",
+					"8108",
+					"--protocol",
+					"http",
+					"--api-key",
+					"your-api-key"
+				]
+			}
+		}
+	},
+	"Travel Planner": {
+		"url": "https://github.com/GongRzhe/TRAVEL-PLANNER-MCP-Server",
+		"description": "Travel planning and itinerary management server integrating with Google Maps API for location search, place details, and route calculations.",
+		"mcpServers": {
+			"travel-planner": {
+				"command": "npx",
+				"args": [
+					"@gongrzhe/server-travelplanner-mcp"
+				],
+				"env": {
+					"GOOGLE_MAPS_API_KEY": "your_google_maps_api_key"
+				}
+			}
+		}
+	},
+	"Unity Catalog": {
+		"url": "https://github.com/ognis1205/mcp-server-unitycatalog",
+		"description": "An MCP server that enables LLMs to interact with Unity Catalog AI, supporting CRUD operations on Unity Catalog Functions and executing them as MCP tools.",
+		"mcpServers": {
+			"unitycatalog": {
+				"command": "uv",
+				"args": [
+					"--directory",
+					"/<path to your local git repository>/mcp-server-unitycatalog",
+					"run",
+					"mcp-server-unitycatalog",
+					"--uc_server",
+					"<your unity catalog url>",
+					"--uc_catalog",
+					"<your catalog name>",
+					"--uc_schema",
+					"<your schema name>"
+				]
+			}
+		}
+	},
+	"Unity Integration (Advanced)": {
+		"url": "https://github.com/quazaai/UnityMCPIntegration",
+		"description": "Advanced Unity3d Game Engine MCP which supports ,Execution of Any Editor Related Code Directly Inside of Unity, Fetch Logs, Get Editor State and Allow File Access of the Project making it much more useful in Script Editing or asset creation.",
+		"mcpServers": {
+			"unity-mcp-server": {
+				"command": "node",
+				"args": [
+					"path-to-project>\\Library\\PackageCache\\com.quaza.unitymcp@d2b8f1260bca\\mcpServer\\mcpServer\build\\index.js"
+				],
+				"env": {
+					"MCP_WEBSOCKET_PORT": "5010"
+				}
+			}
+		}
+	},
+	"Virtual location (Google Street View,etc.)": {
+		"url": "https://github.com/mfukushim/map-traveler-mcp",
+		"description": "Integrates Google Map, Google Street View, PixAI, Stability.ai, ComfyUI API and Bluesky to provide a virtual location simulation in LLM (written in Effect.ts)",
+		"mcpServers": {
+			"traveler": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@mfukushim/map-traveler-mcp"
+				],
+				"env": {
+					"MT_GOOGLE_MAP_KEY": "(Google Map API key)",
+					"MT_MAP_API_URL": "(Optional: Map API custom endpoint. Example: direction=https://xxxx,places=https://yyyy )",
+					"MT_TIME_SCALE": "(Optional:Scale of travel time on real roads duration. default 4)",
+					"MT_SQLITE_PATH": "(db save path: e.g. %USERPROFILE%/Desktop/traveler.sqlite ,$HOME/traveler.sqlite )",
+					"MT_REMBG_PATH": "(absolute path of the installed rembg cli)",
+					"MT_REMBG_URL": "(rembg API URL)",
+					"MT_PIXAI_KEY": "(pixAi API key)",
+					"MT_SD_KEY": "(or Stability.ai image generation API key",
+					"MT_PIXAI_MODEL_ID": "(Optional: pixAi ModelId, if not set use default model 1648918127446573124 ",
+					"MT_COMFY_URL": "(Option: Generate image using ComfyUI API at specified URL. Example: http://192.168.1.100:8188)",
+					"MT_COMFY_WORKFLOW_T2I": "(Optional: Path to API workflow file when using text to image with ComfyUI. If not specified: assets/comfy/t2i_sample.json)",
+					"MT_COMFY_WORKFLOW_I2I": "(Optional: Path of API workflow file when image to image in ComfyUI. If not specified: assets/comfy/i2i_sample.json)",
+					"MT_COMFY_PARAMS": "(Optional: Variable values to send to the workflow via comfyUI API)",
+					"MT_FIXED_MODEL_PROMPT": "(Optional: Fixed avatar generation prompt. You will no longer be able to change your avatar during conversations.)",
+					"MT_BODY_AREA_RATIO": "(Optional: Acceptable avatar image area ratio. default 0.042)",
+					"MT_BODY_HW_RATIO": "(Optional: Acceptable avatar image aspect ratios. default 1.5~2.3)",
+					"MT_BODY_WINDOW_RATIO_W": "(Optional: Avatar composite window horizontal ratio. default 0.5)",
+					"MT_BODY_WINDOW_RATIO_H": "(Optional: Avatar composite window aspect ratio. default 0.75)",
+					"MT_BS_ID": "(Bluesky sns registration address)",
+					"MT_BS_PASS": "(bluesky sns password)",
+					"MT_BS_HANDLE": "(bluesky sns handle name: e.g. xxxxxxxx.bsky.social )",
+					"MT_FILTER_TOOLS": "(Optional: Directly filter the tools to be used. All are available if not specified. e.g. tips,set_traveler_location)",
+					"MT_MOVE_MODE": "(Option: Specify whether the movement mode is realtime or skip. default realtime)",
+					"MT_IMAGE_WIDTH": "(Option: Output image width (pixels) Default is 512)",
+					"MT_NO_IMAGE": "(Options: true = do not output image, not specified = output image if possible, default is not specified)",
+					"MT_FEED_TAG": "(Optional: Specify the feed tag when posting to SNS (#required, 15 characters or more) Default is #geo_less_traveler)"
+				}
+			}
+		}
+	},
+	"VolcEngine TOS": {
+		"url": "https://github.com/dinghuazhou/sample-mcp-server-tos",
+		"description": "A sample MCP server for VolcEngine TOS that flexibly get objects from TOS.",
+		"mcpServers": {
+			"tos-mcp-server": {
+				"command": "uv",
+				"args": [
+					"--directory",
+					"/ABSOLUTE/PATH/TO/PARENT/FOLDER/src/mcp_server_tos",
+					"run",
+					"main.py"
+				]
+			}
+		}
+	},
+	"Webflow": {
+		"url": "https://github.com/kapilduraphe/webflow-mcp-server",
+		"description": "Interfact with the Webflow APIs",
+		"mcpServers": {
+			"webflow": {
+				"command": "node",
+				"args": [
+					"/ABSOLUTE/PATH/TO/YOUR/build/index.js"
+				],
+				"env": {
+					"WEBFLOW_API_TOKEN": "your-api-token"
+				}
+			}
+		}
+	},
+	"Whois MCP": {
+		"url": "https://github.com/bharathvaj-ganesan/whois-mcp",
+		"description": "MCP server that performs whois lookup against domain, IP, ASN and TLD. ",
+		"mcpServers": {
+			"whois": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@bharathvaj/whois-mcp@latest"
+				]
+			}
+		}
+	},
+	"Windows CLI": {
+		"url": "https://github.com/SimonB97/win-cli-mcp-server",
+		"description": "MCP server for secure command-line interactions on Windows systems, enabling controlled access to PowerShell, CMD, and Git Bash shells.",
+		"mcpServers": {
+			"windows-cli": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@simonb97/server-win-cli"
+				]
+			}
+		}
+	},
+	"World Bank data API": {
+		"url": "https://github.com/anshumax/world_bank_mcp_server",
+		"description": "A server that fetches data indicators available with the World Bank as part of their data API",
+		"mcpServers": {
+			"world_bank": {
+				"command": "uv",
+				"args": [
+					"--directory",
+					"path/to/world_bank_mcp_server",
+					"run",
+					"world_bank_mcp_server"
+				]
+			}
+		}
+	},
+	"Xero-mcp-server": {
+		"url": "https://github.com/john-zhang-dev/xero-mcp",
+		"description": "Enabling clients to interact with Xero system for streamlined accounting, invoicing, and business operations.",
+		"mcpServers": {
+			"xero-mcp": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"xero-mcp@latest"
+				],
+				"env": {
+					"XERO_CLIENT_ID": "YOUR_CLIENT_ID",
+					"XERO_CLIENT_SECRET": "YOUR_CLIENT_SECRET",
+					"XERO_REDIRECT_URI": "http://localhost:5000/callback"
+				}
+			}
+		}
+	},
+	"XiYan": {
+		"url": "https://github.com/XGenerationLab/xiyan_mcp_server",
+		"description": "🗄️ An MCP server that supports fetching data from a database using natural language queries, powered by XiyanSQL as the text-to-SQL LLM.",
+		"mcpServers": {
+			"xiyan-mcp-server": {
+				"command": "python",
+				"args": [
+					"-m",
+					"xiyan_mcp_server"
+				],
+				"env": {
+					"YML": "PATH/TO/YML"
+				}
+			}
+		}
+	},
+	"YouTube": {
+		"url": "https://github.com/ZubeidHendricks/youtube-mcp-server",
+		"description": "Comprehensive YouTube API integration for video management, Shorts creation, and analytics.",
+		"mcpServers": {
+			"youtube": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@modelcontextprotocol/server-youtube"
+				],
+				"env": {
+					"YOUTUBE_API_KEY": "<YOUR_API_KEY>"
+				}
+			}
+		}
+	},
+	"Template MCP Server": {
+		"url": "https://github.com/mcpdotdirect/template-mcp-server",
+		"description": "A CLI tool to create a new Model Context Protocol server project with TypeScript support, dual transport options, and an extensible structure",
+		"mcpServers": {
+			"my-mcp-stdio": {
+				"command": "npm",
+				"args": [
+					"start"
+				],
+				"env": {
+					"NODE_ENV": "development"
+				}
+			},
+			"my-mcp-sse": {
+				"url": "http://localhost:3001/sse"
+			}
+		}
+	}
+}
