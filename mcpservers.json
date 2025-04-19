@@ -152,6 +152,24 @@
 			}
 		}
 	},
+	"AWS Knowledge Base Retrieval": {
+		"url": "https://github.com/modelcontextprotocol/servers/tree/main/src/aws-kb-retrieval-server",
+		"description": "An MCP server implementation for retrieving information from the AWS Knowledge Base using the Bedrock Agent Runtime.",
+		"mcpServers": {
+			"aws-kb-retrieval": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@modelcontextprotocol/server-aws-kb-retrieval"
+				],
+				"env": {
+					"AWS_ACCESS_KEY_ID": "YOUR_ACCESS_KEY_HERE",
+					"AWS_SECRET_ACCESS_KEY": "YOUR_SECRET_ACCESS_KEY_HERE",
+					"AWS_REGION": "YOUR_AWS_REGION_HERE"
+				}
+			}
+		}
+	},
 	"Bankless Onchain": {
 		"url": "https://github.com/bankless/onchain-mcp",
 		"description": "Query Onchain data, like ERC20 tokens, transaction history, smart contract state.",
@@ -163,6 +181,22 @@
 				],
 				"env": {
 					"BANKLESS_API_TOKEN": "your_api_token_here"
+				}
+			}
+		}
+	},
+	"Brave Search": {
+		"url": "https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search",
+		"description": "An MCP server implementation that integrates the Brave Search API, providing both web and local search capabilities.",
+		"mcpServers": {
+			"brave-search": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@modelcontextprotocol/server-brave-search"
+				],
+				"env": {
+					"BRAVE_API_KEY": "YOUR_API_KEY_HERE"
 				}
 			}
 		}
@@ -329,6 +363,35 @@
 			}
 		}
 	},
+	"EverArt": {
+		"url": "https://github.com/modelcontextprotocol/servers/tree/main/src/everart",
+		"description": "Image generation server for Claude Desktop using EverArt's API.",
+		"mcpServers": {
+			"everart": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@modelcontextprotocol/server-everart"
+				],
+				"env": {
+					"EVERART_API_KEY": "your_key_here"
+				}
+			}
+		}
+	},
+	"Everything MCP Server": {
+		"url": "https://github.com/modelcontextprotocol/servers/tree/main/src/everything",
+		"description": "This MCP server attempts to exercise all the features of the MCP protocol.",
+		"mcpServers": {
+			"everything": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@modelcontextprotocol/server-everything"
+				]
+			}
+		}
+	},
 	"Exa": {
 		"url": "https://github.com/exa-labs/exa-mcp-server",
 		"description": "Search Engine made for AIs by [Exa](https://exa.ai)",
@@ -358,6 +421,21 @@
 					"your-domain.fibery.io",
 					"--fibery-api-token",
 					"your-api-token"
+				]
+			}
+		}
+	},
+	"Filesystem": {
+		"url": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+		"description": "Node.js server implementing Model Context Protocol (MCP) for filesystem operations.",
+		"mcpServers": {
+			"filesystem": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@modelcontextprotocol/server-filesystem",
+					"/Users/username/Desktop",
+					"/path/to/other/allowed/dir"
 				]
 			}
 		}
@@ -402,6 +480,22 @@
 			}
 		}
 	},
+	"GitHub MCP Server": {
+		"url": "https://github.com/modelcontextprotocol/servers/tree/main/src/github",
+		"description": "Provides seamless integration with GitHub APIs, enabling advanced automation and interaction capabilities for developers and tools.",
+		"mcpServers": {
+			"github": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@modelcontextprotocol/server-github"
+				],
+				"env": {
+					"GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"
+				}
+			}
+		}
+	},
 	"Gitee": {
 		"url": "https://github.com/oschina/mcp-gitee",
 		"description": "Gitee API integration, repository, issue, and pull request management, and more.",
@@ -411,6 +505,35 @@
 				"env": {
 					"GITEE_API_BASE": "https://gitee.com/api/v5",
 					"GITEE_ACCESS_TOKEN": "<your personal access token>"
+				}
+			}
+		}
+	},
+	"Google Drive": {
+		"url": "https://github.com/modelcontextprotocol/servers/tree/main/src/gdrive",
+		"description": "This MCP server integrates with Google Drive to allow listing, reading, and searching over files.",
+		"mcpServers": {
+			"gdrive": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@modelcontextprotocol/server-gdrive"
+				]
+			}
+		}
+	},
+	"Google Maps MCP Server": {
+		"url": "https://github.com/modelcontextprotocol/servers/tree/main/src/google-maps",
+		"description": "MCP Server for the Google Maps API.",
+		"mcpServers": {
+			"google-maps": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@modelcontextprotocol/server-google-maps"
+				],
+				"env": {
+					"GOOGLE_MAPS_API_KEY": "<YOUR_API_KEY>"
 				}
 			}
 		}
@@ -679,6 +802,22 @@
 			}
 		}
 	},
+	"Memory": {
+		"url": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+		"description": "A basic implementation of persistent memory using a local knowledge graph. This lets Claude remember information about the user across chats.",
+		"mcpServers": {
+			"memory": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@modelcontextprotocol/server-memory"
+				],
+				"env": {
+					"MEMORY_FILE_PATH": "/path/to/custom/memory.json"
+				}
+			}
+		}
+	},
 	"Milvus": {
 		"url": "https://github.com/zilliztech/mcp-server-milvus",
 		"description": "Search, Query and interact with data in your Milvus Vector Database.",
@@ -809,6 +948,33 @@
 			}
 		}
 	},
+	"Postgresql": {
+		"url": "https://github.com/modelcontextprotocol/servers/tree/main/src/postgres",
+		"description": "A Model Context Protocol server that provides read-only access to PostgreSQL databases. This server enables LLMs to inspect database schemas and execute read-only queries.",
+		"mcpServers": {
+			"postgres": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@modelcontextprotocol/server-postgres",
+					"postgresql://localhost/mydb"
+				]
+			}
+		}
+	},
+	"Puppeteer": {
+		"url": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
+		"description": "A Model Context Protocol server that provides browser automation capabilities using Puppeteer. This server enables LLMs to interact with web pages, take screenshots, and execute JavaScript in a real browser environment.",
+		"mcpServers": {
+			"puppeteer": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@modelcontextprotocol/server-puppeteer"
+				]
+			}
+		}
+	},
 	"Raygun": {
 		"url": "https://github.com/MindscapeHQ/mcp-server-raygun",
 		"description": "Interact with your crash reporting and real using monitoring data on your Raygun account",
@@ -822,6 +988,20 @@
 				"env": {
 					"RAYGUN_PAT_TOKEN": "your-pat-token-here"
 				}
+			}
+		}
+	},
+	"Redis": {
+		"url": "https://github.com/modelcontextprotocol/servers/tree/main/src/redis",
+		"description": "A Model Context Protocol server that provides access to Redis databases. This server enables LLMs to interact with Redis key-value stores through a set of standardized tools.",
+		"mcpServers": {
+			"redis": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@modelcontextprotocol/server-redis",
+					"redis://localhost:6379"
+				]
 			}
 		}
 	},
@@ -884,6 +1064,19 @@
 			}
 		}
 	},
+	"Sequential Thinking": {
+		"url": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+		"description": "An MCP server implementation that provides a tool for dynamic and reflective problem-solving through a structured thinking process.",
+		"mcpServers": {
+			"sequential-thinking": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@modelcontextprotocol/server-sequential-thinking"
+				]
+			}
+		}
+	},
 	"SingleStore": {
 		"url": "https://github.com/singlestore-labs/mcp-server-singlestore",
 		"description": "Interact with the SingleStore database platform",
@@ -895,6 +1088,24 @@
 					"start",
 					"<SINGLESTORE_API_KEY>"
 				]
+			}
+		}
+	},
+	"Slack": {
+		"url": "https://github.com/modelcontextprotocol/servers/tree/main/src/slack",
+		"description": "MCP Server for the Slack API, enabling Claude to interact with Slack workspaces.",
+		"mcpServers": {
+			"slack": {
+				"command": "npx",
+				"args": [
+					"-y",
+					"@modelcontextprotocol/server-slack"
+				],
+				"env": {
+					"SLACK_BOT_TOKEN": "xoxb-your-bot-token",
+					"SLACK_TEAM_ID": "T01234567",
+					"SLACK_CHANNEL_IDS": "C01234567, C76543210"
+				}
 			}
 		}
 	},
@@ -2526,7 +2737,7 @@
 			}
 		}
 	},
-	"Redis": {
+	"Redis GongRzhe": {
 		"url": "https://github.com/GongRzhe/REDIS-MCP-Server",
 		"description": "Redis database operations and caching microservice server with support for key-value operations, expiration management, and pattern-based key listing.",
 		"mcpServers": {
